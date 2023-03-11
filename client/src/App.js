@@ -1,10 +1,15 @@
 import React from 'react'
-import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import {createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer'
+import HomePage from './components/HomePage';
+import Error from './components/Error';
 
 const router = createBrowserRouter([
     {
         path : '/',
-        element : <div>Root Router</div>
+        element : <HomePage/>,
+        errorElement : <Error/>
     },
     {
         path: '/register',
@@ -15,9 +20,9 @@ const router = createBrowserRouter([
 export default function App() {
   return (
     <>
-    <main>
-        <RouterProvider router={router}></RouterProvider>
-    </main>
+      <Navbar />
+      <Outlet />
+      <Footer />
     </>
   )
 }

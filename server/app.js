@@ -133,11 +133,13 @@ app.get('/getcities',async (req,res)=>{
                 // res.status(200).send(arr);
           })
           .catch((err)=>{
+            console.log(err)
             res.status(404).json(err);
           })
 
     }catch(err)
     {
+      console.log(err)
       res.status(404).json(err);
     }
 })

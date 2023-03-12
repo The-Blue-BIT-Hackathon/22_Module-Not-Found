@@ -7,7 +7,8 @@ import Travel from "./Travel";
 import Stay from "./Stay";
 import OtherPlaces from "./OtherPlaces";
 import RoutePaths from "./RoutePaths";
-import "../index.css"
+import "../index.css";
+// import {fetchData} from "../constants";
 
 //contexts
 const travelContext = createContext();
@@ -19,20 +20,22 @@ const HomePage = () => {
   const [ariaFocusMessage, setAriaFocusMessage] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
-  const [isTabsClicked, setIsTabsClicked] = useState({
-    isRoutesClicked: true,
-    isStayClicked: false,
-    isTravelClicked: false,
-    isOtherPlaceClicked: false
-  });
   const [citiesInBetween, setCitiesInBetween] = useState([]);
 
   const [userSelectedOptions, setUserSelectedOptions] = useState({
     destination: "",
-    citiesInBetween: ["Lonavla", "Akurdi", "Pune", "Chinchwad"]
+    citiesInBetween: ["Lonavla", "Akurdi", "Pune", "Chinchwad"],
+    setCitiesInBetween: {setCitiesInBetween}
   });
+  const [temp, setTemp] = useState([]);
 
+  // useEffect(()=>{
+  //   let data = fetchData("getcities");
+  //   console.log(data);
+  // },[])
   
+  console.log(temp);
+
 
   //populating cityArray for React Select
   let cityArray = [];
@@ -84,44 +87,14 @@ const HomePage = () => {
     if(location !== "" && date !== undefined){
       setIsClicked(true);
       setUserSelectedOptions(prev => {
-        return {...prev, destination: location, citiesInBetween:{cities}}
+        return {...prev, destination: location}
       })
     }
-      
     else
     setIsClicked(false); 
-
   }
   //Handle tab clicks
-  function handleTabClick(option){
-    const temp = {
-      isRoutesClicked: false,
-      isStayClicked: false,
-      isTravelClicked: false,
-      isOtherPlaceClicked: false
-    }
-    setIsTabsClicked(temp)
-    if(option === 1) {
-        setIsTabsClicked(prev => {
-          return {...prev, isRoutesClicked: true}
-        })
-    }
-    else if(option === 2){
-      setIsTabsClicked(prev => {
-        return {...prev, isStayClicked: true}
-      })
-    }
-    else if(option === 3){
-      setIsTabsClicked(prev => {
-        return {...prev, isTravelClicked: true}
-      })
-    }
-    else if(option === 4){
-      setIsTabsClicked(prev => {
-        return {...prev, isOtherPlaceClicked: true}
-      })
-    }
-  }
+  
 
   // todays date in isostring
   let today = new Date().toISOString().split('T')[0];
@@ -185,30 +158,26 @@ const HomePage = () => {
         </div>
         <button onClick={handleSubmit} className="bg-cyan-200 h-8 px-6 rounded-lg md:my-auto md:w-[25%] sm:w-[100%] sm:mt-4">Search</button>
       </div>
-      {!isClicked && <div className="suggestion-container">
+
+      {!isClicked ? 
+      
+      <div className="suggestion-container">
         <h2 className="text-center font-bold text-2xl my-10">Something special for you ... </h2>
         <div className="popular-places-cards grid lg:grid-cols-3 md:grid-cols-2 gap-4 w-4/5 p-4 ml-auto mr-auto">
             {cardsArray}
         </div>
-      </div>}
-      {
-        isClicked && <ul className="flex gap-3 justify-between items-center p-4 w-3/5 m-auto">
-            <li className="w-full text-center p-2 rounded-lg" onClick={()=> handleTabClick(1)} style={{backgroundColor: (isTabsClicked.isRoutesClicked) && "cyan"}}>Routes</li>
-            <li className="w-full text-center p-2 rounded-lg" onClick={()=> handleTabClick(2)} style={{backgroundColor: (isTabsClicked.isStayClicked) && "cyan"}}>Stay</li>
-            <li className="w-full text-center p-2 rounded-lg" onClick={()=> handleTabClick(3)} style={{backgroundColor: (isTabsClicked.isTravelClicked) && "cyan"}}>Travel</li>
-            <li className="w-full text-center p-2 rounded-lg" onClick={()=> handleTabClick(4)} style={{backgroundColor: (isTabsClicked.isOtherPlaceClicked) && "cyan"}}>Other Places</li>
-        </ul>
+      </div> : <div>
+
+      
+      <RoutePaths city={location}> </RoutePaths>
+      <Stay/>
+      <Travel/>
+      </div>
       }
-      <travelContext.Provider value={userSelectedOptions}>
-        {isClicked && isTabsClicked.isRoutesClicked && <RoutePaths></RoutePaths>}
-        {isClicked && isTabsClicked.isStayClicked && <Stay></Stay>}
-        {isClicked && isTabsClicked.isTravelClicked && <Travel ></Travel>}
-        {isClicked && isTabsClicked.isOtherPlaceClicked && <OtherPlaces></OtherPlaces>}
-      </travelContext.Provider>
 
+
+      
     </div>
-
-    
 
       </>
   );

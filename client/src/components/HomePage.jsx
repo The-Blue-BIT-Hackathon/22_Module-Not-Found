@@ -8,7 +8,7 @@ import Stay from "./Stay";
 import OtherPlaces from "./OtherPlaces";
 import RoutePaths from "./RoutePaths";
 import "../index.css"
-
+import Weather from "./Weather";
 //contexts
 const travelContext = createContext();
 

@@ -1,0 +1,1634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Response xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/search/local/ws/rest/v1">
+    <Copyright>Copyright © 2023 Microsoft and its suppliers. All rights reserved. This API cannot be accessed and the content and any results may not be used, reproduced or transmitted in any manner without express written permission from Microsoft Corporation.</Copyright>
+    <BrandLogoUri>http://dev.virtualearth.net/Branding/logo_powered_by.png</BrandLogoUri>
+    <StatusCode>200</StatusCode>
+    <StatusDescription>OK</StatusDescription>
+    <AuthenticationResultCode>ValidCredentials</AuthenticationResultCode>
+    <TraceId>33e34209496b4e24a13d6f7527cb7e8e|PUS0004C6F|0.0.0.0|HKG00067DA, Leg0-HKG00067CB|Ref A: 1C7253D1C8E140C4BE83C751F482B3F3 Ref B: SEL20EDGE0410 Ref C: 2023-03-11T17:45:47Z|Ref A: 1AA8F98A78A3476FB0003B1D62846596 Ref B: SEL20EDGE0621 Ref C: 2023-03-11T17:45:47Z</TraceId>
+    <ResourceSets>
+        <ResourceSet>
+            <EstimatedTotal>1</EstimatedTotal>
+            <Resources>
+                <Route>
+                    <Id>v70,h35609648,i0,a2,cen-US,dAAAAAAAAAAA1,y0,s1,m1,o1,t4,wPbmmQGaHMkBNTBdi9XdSQA2~ALQt18sRtnukAADgAf9S2j4B0~UHVuZSwgSW5kaWE1~~~~~~~~v12,wdENTdvq5LkBSKAtfX4NSQA2~ALQt18sRZJulAADgAYqMYD4B0~R29h0~~~~~~~~v12,k1</Id>
+                    <BoundingBox>
+                        <SouthLatitude>15.35451</SouthLatitude>
+                        <WestLongitude>73.874367</WestLongitude>
+                        <NorthLatitude>18.528649</NorthLatitude>
+                        <EastLongitude>74.53128</EastLongitude>
+                    </BoundingBox>
+                    <DistanceUnit>Kilometer</DistanceUnit>
+                    <DurationUnit>Second</DurationUnit>
+                    <TravelDistance>462.625</TravelDistance>
+                    <TravelDuration>32149</TravelDuration>
+                    <TravelDurationTraffic>32657</TravelDurationTraffic>
+                    <TravelDurationHistoric>0</TravelDurationHistoric>
+                    <TravelDurationTrafficWithoutModel>0</TravelDurationTrafficWithoutModel>
+                    <TrafficDataUsed>None</TrafficDataUsed>
+                    <TrafficCongestion>None</TrafficCongestion>
+                    <RouteLeg>
+                        <TravelDistance>462.625</TravelDistance>
+                        <TravelDuration>32149</TravelDuration>
+                        <TravelMode>Driving</TravelMode>
+                        <ActualStart>
+                            <Latitude>18.528615</Latitude>
+                            <Longitude>73.874367</Longitude>
+                        </ActualStart>
+                        <ActualEnd>
+                            <Latitude>15.360867</Latitude>
+                            <Longitude>74.054405</Longitude>
+                        </ActualEnd>
+                        <StartLocation>
+                            <Name>Pune, India</Name>
+                            <Point>
+                                <Latitude>18.528904</Latitude>
+                                <Longitude>73.874352</Longitude>
+                            </Point>
+                            <BoundingBox>
+                                <SouthLatitude>18.401709</SouthLatitude>
+                                <WestLongitude>73.676903</WestLongitude>
+                                <NorthLatitude>18.633537</NorthLatitude>
+                                <EastLongitude>73.997604</EastLongitude>
+                            </BoundingBox>
+                            <EntityType>PopulatedPlace</EntityType>
+                            <Address>
+                                <AdminDistrict>MH</AdminDistrict>
+                                <AdminDistrict2>Pune</AdminDistrict2>
+                                <CountryRegion>India</CountryRegion>
+                                <FormattedAddress>Pune, India</FormattedAddress>
+                                <Locality>Pune</Locality>
+                            </Address>
+                            <Confidence>High</Confidence>
+                            <MatchCode>Ambiguous</MatchCode>
+                            <GeocodePoint>
+                                <Latitude>18.528904</Latitude>
+                                <Longitude>73.874352</Longitude>
+                                <CalculationMethod>Rooftop</CalculationMethod>
+                                <UsageType>Display</UsageType>
+                            </GeocodePoint>
+                        </StartLocation>
+                        <EndLocation>
+                            <Name>Goa</Name>
+                            <Point>
+                                <Latitude>15.363239</Latitude>
+                                <Longitude>74.052696</Longitude>
+                            </Point>
+                            <BoundingBox>
+                                <SouthLatitude>14.885896</SouthLatitude>
+                                <WestLongitude>73.653419</WestLongitude>
+                                <NorthLatitude>15.81471</NorthLatitude>
+                                <EastLongitude>74.296509</EastLongitude>
+                            </BoundingBox>
+                            <EntityType>AdminDivision1</EntityType>
+                            <Address>
+                                <AdminDistrict>GA</AdminDistrict>
+                                <CountryRegion>India</CountryRegion>
+                                <FormattedAddress>Goa</FormattedAddress>
+                            </Address>
+                            <Confidence>High</Confidence>
+                            <MatchCode>Ambiguous</MatchCode>
+                            <GeocodePoint>
+                                <Latitude>15.363239</Latitude>
+                                <Longitude>74.052696</Longitude>
+                                <CalculationMethod>Rooftop</CalculationMethod>
+                                <UsageType>Display</UsageType>
+                            </GeocodePoint>
+                        </EndLocation>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>0.162</TravelDistance>
+                            <TravelDuration>106</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>18.528615</Latitude>
+                                <Longitude>73.874367</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="DepartStart">Depart from Pune, India</Instruction>
+                            <CompassDirection>east</CompassDirection>
+                            <Warning warningType="PrivateRoad" severity="None">Private Road
+                                <startTime />
+                                <endTime />
+                            </Warning>
+                            <Detail>
+                                <ManeuverType>DepartStart</ManeuverType>
+                                <StartPathIndex>0</StartPathIndex>
+                                <EndPathIndex>2</EndPathIndex>
+                                <CompassDegrees>87</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Street</RoadType>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <TowardsRoadName>His Highness Prince Agakhan Road</TowardsRoadName>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>0.065</TravelDistance>
+                            <TravelDuration>23</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>18.528027</Latitude>
+                                <Longitude>73.875606</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="TurnLeft">Turn left onto His Highness Prince Agakhan Road</Instruction>
+                            <CompassDirection>east</CompassDirection>
+                            <Warning warningType="GateAccess" severity="None">Gated road
+                                <startTime />
+                                <endTime />
+                            </Warning>
+                            <Detail>
+                                <ManeuverType>TurnLeft</ManeuverType>
+                                <StartPathIndex>2</StartPathIndex>
+                                <EndPathIndex>3</EndPathIndex>
+                                <Name>His Highness Prince Agakhan Road</Name>
+                                <CompassDegrees>82</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>MajorRoad</RoadType>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>0.023</TravelDistance>
+                            <TravelDuration>9</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>18.528111</Latitude>
+                                <Longitude>73.876216</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="TurnLeft">Turn left onto Alankar Theatre Road toward Jahangir Hospital / Khadki / Wadia College</Instruction>
+                            <CompassDirection>north</CompassDirection>
+                            <Detail>
+                                <ManeuverType>TurnLeft</ManeuverType>
+                                <StartPathIndex>3</StartPathIndex>
+                                <EndPathIndex>5</EndPathIndex>
+                                <Name>Alankar Theatre Road</Name>
+                                <CompassDegrees>351</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>MajorRoad</RoadType>
+                            </Detail>
+                            <Sign>Jahangir Hospital</Sign>
+                            <Sign>Khadki</Sign>
+                            <Sign>Wadia College</Sign>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>0.96</TravelDistance>
+                            <TravelDuration>163</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>18.528317</Latitude>
+                                <Longitude>73.876185</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="TurnRight">Turn right onto Gen Vaidya Marg</Instruction>
+                            <CompassDirection>east</CompassDirection>
+                            <Detail>
+                                <ManeuverType>TurnRight</ManeuverType>
+                                <StartPathIndex>5</StartPathIndex>
+                                <EndPathIndex>9</EndPathIndex>
+                                <Name>Gen Vaidya Marg</Name>
+                                <CompassDegrees>83</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>MajorRoad</RoadType>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>0.637</TravelDistance>
+                            <TravelDuration>96</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>18.528378</Latitude>
+                                <Longitude>73.885269</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="EnterThenExitRoundabout">At the roundabout, take the 3rd exit for Poona Club Road</Instruction>
+                            <CompassDirection>southeast</CompassDirection>
+                            <Detail>
+                                <ManeuverType>EnterRoundabout</ManeuverType>
+                                <StartPathIndex>9</StartPathIndex>
+                                <EndPathIndex>12</EndPathIndex>
+                                <Name>Koregaon Park Road</Name>
+                                <CompassDegrees>1</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>MajorRoad</RoadType>
+                            </Detail>
+                            <Detail>
+                                <ManeuverType>ExitRoundabout</ManeuverType>
+                                <StartPathIndex>12</StartPathIndex>
+                                <EndPathIndex>15</EndPathIndex>
+                                <Name>Poona Club Road</Name>
+                                <CompassDegrees>148</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>MajorRoad</RoadType>
+                            </Detail>
+                            <Exit>3</Exit>
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>2.199</TravelDistance>
+                            <TravelDuration>285</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>18.523533</Latitude>
+                                <Longitude>73.887818</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="TurnLeft">Turn left onto Ashok Road</Instruction>
+                            <CompassDirection>south</CompassDirection>
+                            <Detail>
+                                <ManeuverType>TurnLeft</ManeuverType>
+                                <StartPathIndex>15</StartPathIndex>
+                                <EndPathIndex>26</EndPathIndex>
+                                <Name>Ashok Road</Name>
+                                <CompassDegrees>159</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>MajorRoad</RoadType>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>4.161</TravelDistance>
+                            <TravelDuration>577</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>18.507263</Latitude>
+                                <Longitude>73.898056</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="KeepStraight">Keep straight to get onto NH65 / Ashok Road</Instruction>
+                            <CompassDirection>southeast</CompassDirection>
+                            <Warning warningType="TrafficFlow" severity="Moderate" origin="18.50465,73.919579" to="18.504423,73.920435">Moderate Congestion
+                                <startTime />
+                                <endTime />
+                            </Warning>
+                            <Detail>
+                                <ManeuverType>KeepStraight</ManeuverType>
+                                <StartPathIndex>26</StartPathIndex>
+                                <EndPathIndex>40</EndPathIndex>
+                                <Name>Ashok Road</Name>
+                                <CompassDegrees>145</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Highway</RoadType>
+                                <RoadShieldRequestParameters>
+                                    <Bucket>918163</Bucket>
+                                    <Shield>
+                                        <RoadShieldType>2</RoadShieldType>
+                                        <Label>NH65</Label>
+                                    </Shield>
+                                </RoadShieldRequestParameters>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>23.853</TravelDistance>
+                            <TravelDuration>2433</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>18.501037</Latitude>
+                                <Longitude>73.936496</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="RampThenHighwayLeft">Take the ramp on the left for NH965 / Sh120 / Pune Saswad Road</Instruction>
+                            <CompassDirection>southeast</CompassDirection>
+                            <Warning warningType="TrafficFlow" severity="Minor" origin="18.483999,73.953736" to="18.483368,73.953999">Minor Congestion
+                                <startTime />
+                                <endTime />
+                            </Warning>
+                            <Detail>
+                                <ManeuverType>TakeRampLeft</ManeuverType>
+                                <StartPathIndex>40</StartPathIndex>
+                                <EndPathIndex>46</EndPathIndex>
+                                <Name>Pune Saswad Road</Name>
+                                <CompassDegrees>35</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Ramp</RoadType>
+                            </Detail>
+                            <Detail>
+                                <ManeuverType>Merge</ManeuverType>
+                                <StartPathIndex>46</StartPathIndex>
+                                <EndPathIndex>140</EndPathIndex>
+                                <Name>Pune Saswad Road</Name>
+                                <CompassDegrees>131</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Highway</RoadType>
+                                <RoadShieldRequestParameters>
+                                    <Bucket>918163</Bucket>
+                                    <Shield>
+                                        <RoadShieldType>2</RoadShieldType>
+                                        <Label>NH965</Label>
+                                    </Shield>
+                                </RoadShieldRequestParameters>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>28.901</TravelDistance>
+                            <TravelDuration>2276</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>18.336584</Latitude>
+                                <Longitude>74.036705</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="TurnRight">Turn right onto Sh131 / Saswad Veer Road</Instruction>
+                            <CompassDirection>west</CompassDirection>
+                            <Detail>
+                                <ManeuverType>TurnRight</ManeuverType>
+                                <StartPathIndex>140</StartPathIndex>
+                                <EndPathIndex>342</EndPathIndex>
+                                <Name>Saswad Veer Road</Name>
+                                <CompassDegrees>254</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>MajorRoad</RoadType>
+                                <RoadShieldRequestParameters>
+                                    <Bucket>918167</Bucket>
+                                    <Shield>
+                                        <RoadShieldType>2</RoadShieldType>
+                                        <Label>Sh131</Label>
+                                    </Shield>
+                                </RoadShieldRequestParameters>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>12.614</TravelDistance>
+                            <TravelDuration>902</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>18.10946</Latitude>
+                                <Longitude>74.107227</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="TurnLeft">Turn left onto Sh131 / NH965DD / Sh15</Instruction>
+                            <CompassDirection>east</CompassDirection>
+                            <Warning warningType="TrafficFlow" severity="Minor" origin="18.091552,74.144346" to="18.08988,74.145328">Minor Congestion
+                                <startTime />
+                                <endTime />
+                            </Warning>
+                            <Detail>
+                                <ManeuverType>TurnLeft</ManeuverType>
+                                <StartPathIndex>342</StartPathIndex>
+                                <EndPathIndex>374</EndPathIndex>
+                                <Name>Sh131</Name>
+                                <Name>NH965DD</Name>
+                                <Name>Sh15</Name>
+                                <CompassDegrees>103</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Highway</RoadType>
+                                <RoadShieldRequestParameters>
+                                    <Bucket>918163</Bucket>
+                                    <Shield>
+                                        <RoadShieldType>2</RoadShieldType>
+                                        <Label>Sh131</Label>
+                                    </Shield>
+                                </RoadShieldRequestParameters>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>43.436</TravelDistance>
+                            <TravelDuration>3102</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>18.041851</Latitude>
+                                <Longitude>74.189513</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="TurnRight">Turn right onto Sh61 / NH965D / Sh117</Instruction>
+                            <CompassDirection>southwest</CompassDirection>
+                            <Warning warningType="TrafficFlow" severity="Minor" origin="18.041293,74.189202" to="18.041851,74.189513">Minor Congestion
+                                <startTime />
+                                <endTime />
+                            </Warning>
+                            <Detail>
+                                <ManeuverType>TurnRight</ManeuverType>
+                                <StartPathIndex>374</StartPathIndex>
+                                <EndPathIndex>511</EndPathIndex>
+                                <Name>Sh61</Name>
+                                <Name>NH965D</Name>
+                                <Name>Sh117</Name>
+                                <CompassDegrees>208</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Highway</RoadType>
+                                <RoadShieldRequestParameters>
+                                    <Bucket>918158</Bucket>
+                                    <Shield>
+                                        <RoadShieldType>2</RoadShieldType>
+                                        <Label>Sh61</Label>
+                                    </Shield>
+                                </RoadShieldRequestParameters>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>0.596</TravelDistance>
+                            <TravelDuration>76</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>17.7076</Latitude>
+                                <Longitude>74.026215</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="TurnRight">Turn right</Instruction>
+                            <CompassDirection>north</CompassDirection>
+                            <Detail>
+                                <ManeuverType>TurnRight</ManeuverType>
+                                <StartPathIndex>511</StartPathIndex>
+                                <EndPathIndex>515</EndPathIndex>
+                                <CompassDegrees>5</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Highway</RoadType>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>2.293</TravelDistance>
+                            <TravelDuration>145</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>17.71292</Latitude>
+                                <Longitude>74.02681</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="RampThenHighwayRight">Take the ramp on the right for AH47 / NH48</Instruction>
+                            <CompassDirection>north</CompassDirection>
+                            <Detail>
+                                <ManeuverType>TakeRampRight</ManeuverType>
+                                <StartPathIndex>515</StartPathIndex>
+                                <EndPathIndex>516</EndPathIndex>
+                                <Name>AH47</Name>
+                                <Name>NH48</Name>
+                                <CompassDegrees>19</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Ramp</RoadType>
+                            </Detail>
+                            <Detail>
+                                <ManeuverType>Merge</ManeuverType>
+                                <StartPathIndex>516</StartPathIndex>
+                                <EndPathIndex>524</EndPathIndex>
+                                <Name>AH47</Name>
+                                <Name>NH48</Name>
+                                <CompassDegrees>359</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Highway</RoadType>
+                                <RoadShieldRequestParameters>
+                                    <Bucket>918163</Bucket>
+                                    <Shield>
+                                        <RoadShieldType>1</RoadShieldType>
+                                        <Label>AH47</Label>
+                                    </Shield>
+                                </RoadShieldRequestParameters>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>0.028</TravelDistance>
+                            <TravelDuration>11</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>17.730513</Latitude>
+                                <Longitude>74.017141</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="TakeRampLeft">Take the ramp on the left</Instruction>
+                            <CompassDirection>west</CompassDirection>
+                            <Detail>
+                                <ManeuverType>TakeRampLeft</ManeuverType>
+                                <StartPathIndex>524</StartPathIndex>
+                                <EndPathIndex>525</EndPathIndex>
+                                <CompassDegrees>282</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Ramp</RoadType>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>0.564</TravelDistance>
+                            <TravelDuration>70</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>17.73057</Latitude>
+                                <Longitude>74.016883</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="Merge">Merge onto road</Instruction>
+                            <CompassDirection>northwest</CompassDirection>
+                            <Detail>
+                                <ManeuverType>Merge</ManeuverType>
+                                <StartPathIndex>525</StartPathIndex>
+                                <EndPathIndex>527</EndPathIndex>
+                                <CompassDegrees>315</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Highway</RoadType>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>0.661</TravelDistance>
+                            <TravelDuration>114</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>17.734233</Latitude>
+                                <Longitude>74.0132</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="TurnRight">Turn right</Instruction>
+                            <CompassDirection>northeast</CompassDirection>
+                            <Detail>
+                                <ManeuverType>TurnRight</ManeuverType>
+                                <StartPathIndex>527</StartPathIndex>
+                                <EndPathIndex>530</EndPathIndex>
+                                <CompassDegrees>40</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Highway</RoadType>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>81.288</TravelDistance>
+                            <TravelDuration>4121</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>17.730506</Latitude>
+                                <Longitude>74.017455</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="RampThenHighwayRight">Take the ramp on the right for AH47 / NH48</Instruction>
+                            <CompassDirection>southeast</CompassDirection>
+                            <Warning warningType="TollRoad" severity="None">Toll road
+                                <startTime />
+                                <endTime />
+                            </Warning>
+                            <Warning warningType="ScheduledConstruction" severity="None" origin="17.276295,74.177412" to="17.270115,74.179535">Roadwork on AH47 - NH48 from NH166E to SH150.
+                                <startTime />
+                                <endTime />
+                            </Warning>
+                            <Warning warningType="TrafficFlow" severity="Minor" origin="17.713812,74.027059" to="17.713669,74.027065">Minor Congestion
+                                <startTime />
+                                <endTime />
+                            </Warning>
+                            <Detail>
+                                <ManeuverType>TakeRampRight</ManeuverType>
+                                <StartPathIndex>530</StartPathIndex>
+                                <EndPathIndex>531</EndPathIndex>
+                                <Name>AH47</Name>
+                                <Name>NH48</Name>
+                                <CompassDegrees>165</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Ramp</RoadType>
+                            </Detail>
+                            <Detail>
+                                <ManeuverType>Merge</ManeuverType>
+                                <StartPathIndex>531</StartPathIndex>
+                                <EndPathIndex>676</EndPathIndex>
+                                <Name>AH47</Name>
+                                <Name>NH48</Name>
+                                <CompassDegrees>136</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Highway</RoadType>
+                                <RoadShieldRequestParameters>
+                                    <Bucket>918163</Bucket>
+                                    <Shield>
+                                        <RoadShieldType>1</RoadShieldType>
+                                        <Label>AH47</Label>
+                                    </Shield>
+                                </RoadShieldRequestParameters>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>20.91</TravelDistance>
+                            <TravelDuration>985</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>17.060696</Latitude>
+                                <Longitude>74.230835</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="KeepToStayRight">Keep right to stay on AH47 / NH48</Instruction>
+                            <CompassDirection>southeast</CompassDirection>
+                            <Detail>
+                                <ManeuverType>KeepToStayRight</ManeuverType>
+                                <StartPathIndex>676</StartPathIndex>
+                                <EndPathIndex>714</EndPathIndex>
+                                <Name>AH47</Name>
+                                <Name>NH48</Name>
+                                <CompassDegrees>146</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Highway</RoadType>
+                                <RoadShieldRequestParameters>
+                                    <Bucket>918163</Bucket>
+                                    <Shield>
+                                        <RoadShieldType>1</RoadShieldType>
+                                        <Label>AH47</Label>
+                                    </Shield>
+                                </RoadShieldRequestParameters>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>124.273</TravelDistance>
+                            <TravelDuration>6377</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>16.89</Latitude>
+                                <Longitude>74.295779</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="RampThenHighwayLeft">Take the ramp on the left for AH47 / NH48</Instruction>
+                            <CompassDirection>south</CompassDirection>
+                            <Warning warningType="TollRoad" severity="None">Toll road
+                                <startTime />
+                                <endTime />
+                            </Warning>
+                            <Warning warningType="AdminDivisionChange" severity="None">Entering Karnataka
+                                <startTime />
+                                <endTime />
+                            </Warning>
+                            <Warning warningType="ScheduledConstruction" severity="None" origin="16.481214,74.342156" to="16.471167,74.347428">Roadwork on AH47 - NH48 at Nippani.
+                                <startTime />
+                                <endTime />
+                            </Warning>
+                            <Warning warningType="AdminDivisionChange" severity="None">Entering Maharashtra
+                                <startTime />
+                                <endTime />
+                            </Warning>
+                            <Warning warningType="ScheduledConstruction" severity="None" origin="16.11815,74.517401" to="16.103662,74.517915">Roadwork on AH47 - NH48 from SH78 to Hukeri.
+                                <startTime />
+                                <endTime />
+                            </Warning>
+                            <Warning warningType="ScheduledConstruction" severity="None" origin="16.080974,74.518083" to="16.059099,74.513865">Roadwork on AH47 - NH48 from Hukeri to SH141.
+                                <startTime />
+                                <endTime />
+                            </Warning>
+                            <Warning warningType="ScheduledConstruction" severity="None" origin="16.050707,74.516565" to="16.032433,74.53123">Roadwork on AH47 - NH48 from SH141 to Belagavi.
+                                <startTime />
+                                <endTime />
+                            </Warning>
+                            <Warning warningType="TrafficFlow" severity="Moderate" origin="16.877013,74.298292" to="16.876418,74.298411">Moderate Congestion
+                                <startTime />
+                                <endTime />
+                            </Warning>
+                            <Detail>
+                                <ManeuverType>TakeRampLeft</ManeuverType>
+                                <StartPathIndex>714</StartPathIndex>
+                                <EndPathIndex>719</EndPathIndex>
+                                <Name>AH47</Name>
+                                <Name>NH48</Name>
+                                <CompassDegrees>111</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Ramp</RoadType>
+                            </Detail>
+                            <Detail>
+                                <ManeuverType>Merge</ManeuverType>
+                                <StartPathIndex>719</StartPathIndex>
+                                <EndPathIndex>1064</EndPathIndex>
+                                <Name>AH47</Name>
+                                <Name>NH48</Name>
+                                <CompassDegrees>179</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Highway</RoadType>
+                                <RoadShieldRequestParameters>
+                                    <Bucket>918162</Bucket>
+                                    <Shield>
+                                        <RoadShieldType>1</RoadShieldType>
+                                        <Label>AH47</Label>
+                                    </Shield>
+                                </RoadShieldRequestParameters>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>0.548</TravelDistance>
+                            <TravelDuration>68</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>15.908251</Latitude>
+                                <Longitude>74.524022</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="BearLeft">Bear left onto Mumbai Bangalore Road toward Panaji</Instruction>
+                            <CompassDirection>south</CompassDirection>
+                            <Detail>
+                                <ManeuverType>BearLeft</ManeuverType>
+                                <StartPathIndex>1064</StartPathIndex>
+                                <EndPathIndex>1067</EndPathIndex>
+                                <Name>Mumbai Bangalore Road</Name>
+                                <CompassDegrees>165</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>MajorRoad</RoadType>
+                            </Detail>
+                            <Sign>Panaji</Sign>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>0.071</TravelDistance>
+                            <TravelDuration>12</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>15.903331</Latitude>
+                                <Longitude>74.524148</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="EnterThenExitRoundabout">At the roundabout, take Exit 0</Instruction>
+                            <CompassDirection>west</CompassDirection>
+                            <Detail>
+                                <ManeuverType>EnterRoundabout</ManeuverType>
+                                <StartPathIndex>1067</StartPathIndex>
+                                <EndPathIndex>1071</EndPathIndex>
+                                <CompassDegrees>145</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>MajorRoad</RoadType>
+                            </Detail>
+                            <Detail>
+                                <ManeuverType>ExitRoundabout</ManeuverType>
+                                <StartPathIndex>1071</StartPathIndex>
+                                <EndPathIndex>1073</EndPathIndex>
+                                <CompassDegrees>270</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>MajorRoad</RoadType>
+                            </Detail>
+                            <Exit>0</Exit>
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>0.034</TravelDistance>
+                            <TravelDuration>8</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>15.903246</Latitude>
+                                <Longitude>74.523756</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="EnterRoundabout">Enter the roundabout</Instruction>
+                            <CompassDirection>south</CompassDirection>
+                            <Detail>
+                                <ManeuverType>EnterRoundabout</ManeuverType>
+                                <StartPathIndex>1073</StartPathIndex>
+                                <EndPathIndex>1076</EndPathIndex>
+                                <CompassDegrees>192</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>MajorRoad</RoadType>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>1.164</TravelDistance>
+                            <TravelDuration>113</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>15.903131</Latitude>
+                                <Longitude>74.52352</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="ExitRoundabout">Exit the roundabout at the 1st exit, onto Ambedkar Road</Instruction>
+                            <CompassDirection>south</CompassDirection>
+                            <Detail>
+                                <ManeuverType>ExitRoundabout</ManeuverType>
+                                <StartPathIndex>1076</StartPathIndex>
+                                <EndPathIndex>1081</EndPathIndex>
+                                <Name>Ambedkar Road</Name>
+                                <CompassDegrees>179</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>MajorRoad</RoadType>
+                            </Detail>
+                            <Exit>1</Exit>
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>3.168</TravelDistance>
+                            <TravelDuration>330</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>15.892674</Latitude>
+                                <Longitude>74.523802</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="Continue">Continue on NH748 / Ambedkar Road</Instruction>
+                            <CompassDirection>south</CompassDirection>
+                            <Detail>
+                                <ManeuverType>Continue</ManeuverType>
+                                <StartPathIndex>1081</StartPathIndex>
+                                <EndPathIndex>1088</EndPathIndex>
+                                <Name>Ambedkar Road</Name>
+                                <CompassDegrees>190</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>MajorRoad</RoadType>
+                                <RoadShieldRequestParameters>
+                                    <Bucket>918163</Bucket>
+                                    <Shield>
+                                        <RoadShieldType>2</RoadShieldType>
+                                        <Label>NH748</Label>
+                                    </Shield>
+                                </RoadShieldRequestParameters>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>0.086</TravelDistance>
+                            <TravelDuration>26</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>15.867354</Latitude>
+                                <Longitude>74.511718</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="EnterThenExitRoundabout">At the roundabout, take the 3rd exit for NH748 / Sh54 / Sh20 / Club road</Instruction>
+                            <CompassDirection>west</CompassDirection>
+                            <Detail>
+                                <ManeuverType>EnterRoundabout</ManeuverType>
+                                <StartPathIndex>1088</StartPathIndex>
+                                <EndPathIndex>1091</EndPathIndex>
+                                <Name>Club road</Name>
+                                <CompassDegrees>103</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Highway</RoadType>
+                                <RoadShieldRequestParameters>
+                                    <Bucket>918163</Bucket>
+                                    <Shield>
+                                        <RoadShieldType>2</RoadShieldType>
+                                        <Label>NH748</Label>
+                                    </Shield>
+                                </RoadShieldRequestParameters>
+                            </Detail>
+                            <Detail>
+                                <ManeuverType>ExitRoundabout</ManeuverType>
+                                <StartPathIndex>1091</StartPathIndex>
+                                <EndPathIndex>1095</EndPathIndex>
+                                <Name>Club road</Name>
+                                <CompassDegrees>270</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Highway</RoadType>
+                                <RoadShieldRequestParameters>
+                                    <Bucket>918158</Bucket>
+                                    <Shield>
+                                        <RoadShieldType>2</RoadShieldType>
+                                        <Label>NH748</Label>
+                                    </Shield>
+                                </RoadShieldRequestParameters>
+                            </Detail>
+                            <Exit>3</Exit>
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>1.045</TravelDistance>
+                            <TravelDuration>133</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>15.867264</Latitude>
+                                <Longitude>74.511109</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="EnterThenExitRoundabout">At the roundabout, take the 1st exit for NH748 / Sh54 / Ling Raj College Road</Instruction>
+                            <CompassDirection>southwest</CompassDirection>
+                            <Detail>
+                                <ManeuverType>EnterRoundabout</ManeuverType>
+                                <StartPathIndex>1095</StartPathIndex>
+                                <EndPathIndex>1097</EndPathIndex>
+                                <Name>Club road</Name>
+                                <CompassDegrees>226</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Highway</RoadType>
+                                <RoadShieldRequestParameters>
+                                    <Bucket>918163</Bucket>
+                                    <Shield>
+                                        <RoadShieldType>2</RoadShieldType>
+                                        <Label>NH748</Label>
+                                    </Shield>
+                                </RoadShieldRequestParameters>
+                            </Detail>
+                            <Detail>
+                                <ManeuverType>ExitRoundabout</ManeuverType>
+                                <StartPathIndex>1097</StartPathIndex>
+                                <EndPathIndex>1106</EndPathIndex>
+                                <Name>Ling Raj College Road</Name>
+                                <CompassDegrees>245</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Highway</RoadType>
+                                <RoadShieldRequestParameters>
+                                    <Bucket>918163</Bucket>
+                                    <Shield>
+                                        <RoadShieldType>2</RoadShieldType>
+                                        <Label>NH748</Label>
+                                    </Shield>
+                                </RoadShieldRequestParameters>
+                            </Detail>
+                            <Exit>1</Exit>
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>6.953</TravelDistance>
+                            <TravelDuration>828</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>15.859413</Latitude>
+                                <Longitude>74.508088</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="EnterThenExitRoundabout">At the roundabout, take the 2nd exit</Instruction>
+                            <CompassDirection>southwest</CompassDirection>
+                            <Detail>
+                                <ManeuverType>EnterRoundabout</ManeuverType>
+                                <StartPathIndex>1106</StartPathIndex>
+                                <EndPathIndex>1108</EndPathIndex>
+                                <Name>Congress road</Name>
+                                <CompassDegrees>105</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Highway</RoadType>
+                                <RoadShieldRequestParameters>
+                                    <Bucket>918163</Bucket>
+                                    <Shield>
+                                        <RoadShieldType>2</RoadShieldType>
+                                        <Label>NH748</Label>
+                                    </Shield>
+                                </RoadShieldRequestParameters>
+                            </Detail>
+                            <Detail>
+                                <ManeuverType>ExitRoundabout</ManeuverType>
+                                <StartPathIndex>1108</StartPathIndex>
+                                <EndPathIndex>1135</EndPathIndex>
+                                <Name>Congress road</Name>
+                                <CompassDegrees>215</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Highway</RoadType>
+                                <RoadShieldRequestParameters>
+                                    <Bucket>918163</Bucket>
+                                    <Shield>
+                                        <RoadShieldType>2</RoadShieldType>
+                                        <Label>NH748</Label>
+                                    </Shield>
+                                </RoadShieldRequestParameters>
+                            </Detail>
+                            <Exit>2</Exit>
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>4.905</TravelDistance>
+                            <TravelDuration>415</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>15.804457</Latitude>
+                                <Longitude>74.483485</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="KeepLeft">Keep left to get onto NH748 / Khanapur Road</Instruction>
+                            <CompassDirection>southwest</CompassDirection>
+                            <Detail>
+                                <ManeuverType>KeepLeft</ManeuverType>
+                                <StartPathIndex>1135</StartPathIndex>
+                                <EndPathIndex>1152</EndPathIndex>
+                                <Name>Khanapur Road</Name>
+                                <CompassDegrees>218</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Highway</RoadType>
+                                <RoadShieldRequestParameters>
+                                    <Bucket>918158</Bucket>
+                                    <Shield>
+                                        <RoadShieldType>2</RoadShieldType>
+                                        <Label>NH748</Label>
+                                    </Shield>
+                                </RoadShieldRequestParameters>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>15.375</TravelDistance>
+                            <TravelDuration>1114</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>15.761761</Latitude>
+                                <Longitude>74.489769</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="KeepToStayRight">Keep right to stay on NH748 / Khanapur Road</Instruction>
+                            <CompassDirection>south</CompassDirection>
+                            <Detail>
+                                <ManeuverType>KeepToStayRight</ManeuverType>
+                                <StartPathIndex>1152</StartPathIndex>
+                                <EndPathIndex>1219</EndPathIndex>
+                                <Name>Khanapur Road</Name>
+                                <CompassDegrees>190</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Highway</RoadType>
+                                <RoadShieldRequestParameters>
+                                    <Bucket>918163</Bucket>
+                                    <Shield>
+                                        <RoadShieldType>2</RoadShieldType>
+                                        <Label>NH748</Label>
+                                    </Shield>
+                                </RoadShieldRequestParameters>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>33.788</TravelDistance>
+                            <TravelDuration>3242</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>15.63318</Latitude>
+                                <Longitude>74.512291</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="TurnRight">Turn right onto Sh30</Instruction>
+                            <CompassDirection>southwest</CompassDirection>
+                            <Detail>
+                                <ManeuverType>TurnRight</ManeuverType>
+                                <StartPathIndex>1219</StartPathIndex>
+                                <EndPathIndex>1397</EndPathIndex>
+                                <Name>Sh30</Name>
+                                <CompassDegrees>229</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>MajorRoad</RoadType>
+                                <RoadShieldRequestParameters>
+                                    <Bucket>918167</Bucket>
+                                    <Shield>
+                                        <RoadShieldType>2</RoadShieldType>
+                                        <Label>Sh30</Label>
+                                    </Shield>
+                                </RoadShieldRequestParameters>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>32.249</TravelDistance>
+                            <TravelDuration>2563</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>15.439523</Latitude>
+                                <Longitude>74.303458</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="BearRight">Bear right onto NH748</Instruction>
+                            <CompassDirection>southwest</CompassDirection>
+                            <Warning warningType="AdminDivisionChange" severity="None">Entering Goa
+                                <startTime />
+                                <endTime />
+                            </Warning>
+                            <Warning warningType="ScheduledConstruction" severity="None" origin="15.369957,74.212265" to="15.368525,74.20797">Roadwork on NH748 from Molem Sanvordem Road to Molem.
+                                <startTime />
+                                <endTime />
+                            </Warning>
+                            <Detail>
+                                <ManeuverType>BearRight</ManeuverType>
+                                <StartPathIndex>1397</StartPathIndex>
+                                <EndPathIndex>1725</EndPathIndex>
+                                <Name>NH748</Name>
+                                <CompassDegrees>244</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Highway</RoadType>
+                                <RoadShieldRequestParameters>
+                                    <Bucket>918158</Bucket>
+                                    <Shield>
+                                        <RoadShieldType>2</RoadShieldType>
+                                        <Label>NH748</Label>
+                                    </Shield>
+                                </RoadShieldRequestParameters>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>3.951</TravelDistance>
+                            <TravelDuration>296</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>15.389224</Latitude>
+                                <Longitude>74.127082</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="TurnLeft">Turn left onto Sh7 / Dabal Molem Road</Instruction>
+                            <CompassDirection>south</CompassDirection>
+                            <Detail>
+                                <ManeuverType>TurnLeft</ManeuverType>
+                                <StartPathIndex>1725</StartPathIndex>
+                                <EndPathIndex>1760</EndPathIndex>
+                                <Name>Dabal Molem Road</Name>
+                                <CompassDegrees>183</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Highway</RoadType>
+                                <RoadShieldRequestParameters>
+                                    <Bucket>918158</Bucket>
+                                    <Shield>
+                                        <RoadShieldType>2</RoadShieldType>
+                                        <Label>Sh7</Label>
+                                    </Shield>
+                                </RoadShieldRequestParameters>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>0.472</TravelDistance>
+                            <TravelDuration>53</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>15.3584</Latitude>
+                                <Longitude>74.127736</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="EnterThenExitRoundabout">At the roundabout, take the 2nd exit</Instruction>
+                            <CompassDirection>west</CompassDirection>
+                            <Detail>
+                                <ManeuverType>EnterRoundabout</ManeuverType>
+                                <StartPathIndex>1760</StartPathIndex>
+                                <EndPathIndex>1763</EndPathIndex>
+                                <Name>Dabal Molem Road</Name>
+                                <CompassDegrees>207</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Highway</RoadType>
+                                <RoadShieldRequestParameters>
+                                    <Bucket>918163</Bucket>
+                                    <Shield>
+                                        <RoadShieldType>2</RoadShieldType>
+                                        <Label>Sh7</Label>
+                                    </Shield>
+                                </RoadShieldRequestParameters>
+                            </Detail>
+                            <Detail>
+                                <ManeuverType>ExitRoundabout</ManeuverType>
+                                <StartPathIndex>1763</StartPathIndex>
+                                <EndPathIndex>1767</EndPathIndex>
+                                <Name>Dabal Molem Road</Name>
+                                <CompassDegrees>278</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Highway</RoadType>
+                                <RoadShieldRequestParameters>
+                                    <Bucket>918163</Bucket>
+                                    <Shield>
+                                        <RoadShieldType>2</RoadShieldType>
+                                        <Label>Sh7</Label>
+                                    </Shield>
+                                </RoadShieldRequestParameters>
+                            </Detail>
+                            <Exit>2</Exit>
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>9.169</TravelDistance>
+                            <TravelDuration>810</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>15.356506</Latitude>
+                                <Longitude>74.124077</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="KeepRight">Keep right to get onto Ponda Dabal Road</Instruction>
+                            <CompassDirection>west</CompassDirection>
+                            <Detail>
+                                <ManeuverType>KeepRight</ManeuverType>
+                                <StartPathIndex>1767</StartPathIndex>
+                                <EndPathIndex>1848</EndPathIndex>
+                                <Name>Ponda Dabal Road</Name>
+                                <CompassDegrees>254</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>MajorRoad</RoadType>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>2.023</TravelDistance>
+                            <TravelDuration>247</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>15.373627</Latitude>
+                                <Longitude>74.058802</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="TurnLeft">Turn left</Instruction>
+                            <CompassDirection>southwest</CompassDirection>
+                            <Detail>
+                                <ManeuverType>TurnLeft</ManeuverType>
+                                <StartPathIndex>1848</StartPathIndex>
+                                <EndPathIndex>1879</EndPathIndex>
+                                <CompassDegrees>213</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Street</RoadType>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Unknown</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <ItineraryItem>
+                            <TravelMode>Driving</TravelMode>
+                            <TravelDistance>0</TravelDistance>
+                            <TravelDuration>0</TravelDuration>
+                            <ManeuverPoint>
+                                <Latitude>15.360867</Latitude>
+                                <Longitude>74.054405</Longitude>
+                            </ManeuverPoint>
+                            <Instruction maneuverType="ArriveFinish">Arrive at Goa on the right</Instruction>
+                            <CompassDirection>southwest</CompassDirection>
+                            <Hint hintType="PreviousIntersection">The last intersection before your destination is Ponda Dabal Road</Hint>
+                            <Detail>
+                                <ManeuverType>ArriveFinish</ManeuverType>
+                                <StartPathIndex>1879</StartPathIndex>
+                                <EndPathIndex>1879</EndPathIndex>
+                                <CompassDegrees>213</CompassDegrees>
+                                <Mode>Driving</Mode>
+                                <PreviousEntityId>0</PreviousEntityId>
+                                <NextEntityId>0</NextEntityId>
+                                <RoadType>Street</RoadType>
+                            </Detail>
+                            <Exit />
+                            <TollZone />
+                            <TransitTerminus />
+                            <TripId>0</TripId>
+                            <IconType>Auto</IconType>
+                            <Time>0001-01-01T00:00:00</Time>
+                            <TransitStopId>0</TransitStopId>
+                            <SideOfStreet>Right</SideOfStreet>
+                            <IsRealTimeTransit>false</IsRealTimeTransit>
+                            <RealTimeTransitDelay>0</RealTimeTransitDelay>
+                        </ItineraryItem>
+                        <RouteSubLeg>
+                            <TravelDistance>462.625</TravelDistance>
+                            <TravelDuration>32149</TravelDuration>
+                            <StartWaypoint>
+                                <Latitude>18.528615</Latitude>
+                                <Longitude>73.874367</Longitude>
+                                <Description>Pune, India</Description>
+                                <IsVia>false</IsVia>
+                                <LocationIdentifier>0|180|45|215|203|17|182|123|164|0|0|224|1|255|82|218|62|1|18.528615,73.874367</LocationIdentifier>
+                                <RoutePathIndex>0</RoutePathIndex>
+                            </StartWaypoint>
+                            <EndWaypoint>
+                                <Latitude>15.360867</Latitude>
+                                <Longitude>74.054405</Longitude>
+                                <Description>Goa</Description>
+                                <IsVia>false</IsVia>
+                                <LocationIdentifier>0|180|45|215|203|17|100|155|165|0|0|224|1|138|140|96|62|1|15.360867,74.054405</LocationIdentifier>
+                                <RoutePathIndex>1879</RoutePathIndex>
+                            </EndWaypoint>
+                        </RouteSubLeg>
+                        <StartTime>2023-03-11T23:15:47.6522059</StartTime>
+                        <EndTime>2023-03-12T08:20:04.6522059</EndTime>
+                        <Description>AH47, NH748</Description>
+                        <RouteRegion>WWMX</RouteRegion>
+                    </RouteLeg>
+                    <TravelMode>Driving</TravelMode>
+                </Route>
+            </Resources>
+        </ResourceSet>
+    </ResourceSets>
+</Response>

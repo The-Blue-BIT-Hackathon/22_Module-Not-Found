@@ -55,7 +55,7 @@ const register = async (req, res) => {
       if (!Validpassword) res.status(400).json('Wrong password  please try again !!')
 
       else {
-        const token = jwt.sign({ id: user._id, email: req.body.email },process.env.SECRET_KEY, { expiresIn: '30d' })
+        const token = jwt.sign({ id: user._id, email: req.body.email },process.env.SECRET_KEY, { expiresIn: '1d' })
         console.log(`asking for jwt token details :${req.cookies.jwtoken.secret}`);
         res.status(200).cookie("jwtoken", token, { httpOnly: true }).json({ user, token: token });
         // res.status(200).json(user);
@@ -82,5 +82,7 @@ const register = async (req, res) => {
         
 //     }
 // }
+
+
 
 module.exports={register,login}

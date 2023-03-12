@@ -8,6 +8,7 @@ import Stay from "./Stay";
 import OtherPlaces from "./OtherPlaces";
 import RoutePaths from "./RoutePaths";
 import "../index.css"
+import Weather from "./Weather";
 
 //contexts
 const travelContext = createContext();
@@ -150,6 +151,7 @@ const HomePage = () => {
   return (
     <>
     <div>
+      <Weather cityName="Pune"></Weather>
       <div className="banner w-full px-4 py-10
        bg-teal-500 flex-col justify-start items-center">
         <h1 className="text-center font-bold text-5xl">
@@ -179,6 +181,7 @@ const HomePage = () => {
             className="w-full"
           />
         </form>
+        
         <div className="calendar-container md:w-[30%] sm:w-[100%] flex-col justify-center">
           <h4 className="mb-2" style={style.label}>Date</h4>
           <input type="date" className="w-full border" min={today} onChange={handleDateChange} value={date} />

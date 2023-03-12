@@ -45,7 +45,7 @@ app.get('/getNearbyPlaces',async(req,res)=>{
       })
       .then((resp)=>res.json())
       .then((data)=>{
-          
+
       })
   }
   catch(err)
@@ -55,8 +55,8 @@ app.get('/getNearbyPlaces',async(req,res)=>{
 })
 app.get('/getcities',async (req,res)=>{
     try{
-       
-        const url="https://api.geoapify.com/v1/routing?waypoints=18.5204%2C73.8567%7C18.7557%2C73.4091&mode=drive&apiKey=0d9568502cca49a29d3861244023e2f1"
+        let src_lat=18.5204,src_longitude=73.8567,dest_lat=18.7557,dest_longitude=73.4091;
+        const url=`https://api.geoapify.com/v1/routing?waypoints=${src_lat}%2C${src_longitude}%7C${dest_lat}%2C${dest_longitude}&mode=drive&apiKey=0d9568502cca49a29d3861244023e2f1`
         const resp= await fetch(url, {
             method: "GET",
             headers: {

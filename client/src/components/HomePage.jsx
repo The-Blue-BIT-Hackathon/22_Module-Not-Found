@@ -173,6 +173,7 @@ const HomePage = () => {
       <RoutePaths city={location}> </RoutePaths>
       <Stay/>
       <Travel/>
+      <Weather cityName="Lonavla"/>
       </div>
       }
 

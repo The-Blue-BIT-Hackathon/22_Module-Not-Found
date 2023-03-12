@@ -5,18 +5,6 @@ import Footer from './components/Footer'
 import HomePage from './components/HomePage';
 import Error from './components/Error';
 
-const router = createBrowserRouter([
-    {
-        path : '/',
-        element : <HomePage/>,
-        errorElement : <Error/>
-    },
-    {
-        path: '/register',
-        element : <div>Register Route</div>
-    },
-])
-
 export default function App() {
   return (
     <>
@@ -26,3 +14,27 @@ export default function App() {
     </>
   )
 }
+
+export const Approuter = createBrowserRouter([
+    {
+        path : '/',
+        element : <App/>,
+        errorElement : <Error/>,
+        children: [
+          {
+            path: '/',
+            element : <HomePage />
+        },
+        {
+          path: '/register',
+          element : <div>Register Route</div>
+      },
+        ]
+    },
+    
+])
+
+
+
+
+

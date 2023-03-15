@@ -9,11 +9,15 @@ import OtherPlaces from "./OtherPlaces";
 import RoutePaths from "./RoutePaths";
 import "../index.css"
 import Weather from "./Weather";
-//contexts
+import { Link , useNavigate} from "react-router-dom";
+import axios from "axios";
+
+ //contexts
 const travelContext = createContext();
 
 const HomePage = () => {
   // states
+  const navigate = useNavigate();
   const [location, setLocation] = useState("");
   const [date, setDate] = useState();
   const [ariaFocusMessage, setAriaFocusMessage] = useState("");
@@ -81,12 +85,26 @@ const HomePage = () => {
   }
 
   //Handle search button click
-  function handleSubmit(){
+  function handleSubmit(e){
     console.log(date)
     if(location !== "" && date !== undefined){
+      
       setIsClicked(true);
       setUserSelectedOptions(prev => {
         return {...prev, destination: location}
+      })
+      const url = `http://localhost:5000/search/`+location;
+      axios.get(url).then((res) =>{
+        console.log("location :",location);
+        if(res.status === 200){
+          console.log("res status 200");
+          navigate('/search?q='+location);
+        }
+        else{
+          navigate('/error');
+        }
+      }).catch((err)=>{
+        console.log(err.message);
       })
     }
     else
@@ -122,7 +140,7 @@ const HomePage = () => {
   return (
     <>
     <div>
-      <Weather cityName="Pune"></Weather>
+      
       <div className="banner w-full px-4 py-10
        bg-teal-500 flex-col justify-start items-center">
         <h1 className="text-center font-bold text-5xl">
@@ -157,7 +175,9 @@ const HomePage = () => {
           <h4 className="mb-2" style={style.label}>Date</h4>
           <input type="date" className="w-full border" min={today} onChange={handleDateChange} value={date} />
         </div>
+        {/* <Link to="/Search"> */}
         <button onClick={handleSubmit} className="bg-cyan-200 h-8 px-6 rounded-lg md:my-auto md:w-[25%] sm:w-[100%] sm:mt-4">Search</button>
+        {/* </Link> */}
       </div>
 
       {!isClicked ? 
@@ -170,10 +190,10 @@ const HomePage = () => {
       </div> : <div>
 
       
-      <RoutePaths city={location}> </RoutePaths>
-      <Stay/>
-      <Travel/>
-      <Weather cityName="Lonavla"/>
+      {/* <RoutePaths city={location}> </RoutePaths> */}
+      {/* <Stay/> */}
+      {/* <Travel/> */}
+      {/* <Weather cityName="Lonavla"/> */}
       </div>
       }
 

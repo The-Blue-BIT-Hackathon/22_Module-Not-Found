@@ -8,8 +8,8 @@ const Weather = (props) =>  {
   let nameOfCity = props.cityName;
   const getWeatherDetails = (nameOfCity) =>{
     if(!nameOfCity) return;
-    console.log(process.env);
-    const apiURL = "https://api.openweathermap.org/data/2.5/weather?q="+nameOfCity +"&APPID="+process.env.REACT_APP_API_KEY;
+    console.log(process.env.REACT_APP_OPENAPI_KEY);
+    const apiURL = "https://api.openweathermap.org/data/2.5/weather?q="+nameOfCity+"&APPID="+process.env.REACT_APP_OPENAPI_KEY;
     axios.get(apiURL).then((res)=>{
       console.log("response", res.data);
       setData(res.data);
@@ -26,7 +26,7 @@ const Weather = (props) =>  {
   return (<>
     {Object.keys(data).length > 0 &&
     <div>
-        <div className="shadow rounded weatherResultBox">
+        <div className="shadow-lg shadow-gray-400 rounded-2xl weatherResultBox">
            <img className="weatherIcon" src={logo} alt="weatherlogo"/>
            <h5 className="weatherCity">{data?.name}</h5>
            <h6 className="weatherTemp">{((data?.main?.temp)-273.15).toFixed(2)}<sup>o</sup>C</h6>
@@ -42,23 +42,3 @@ const Weather = (props) =>  {
 }
 
 export default Weather;
-
-
-// axios.get(url)
-// .then((response) => {
-//     const obj = response.data;
-
-
-//     var data1 = JSON.parse(JSON.stringify(obj));
-//     console.log(data1.weather[0].main);
-//     descr = "Feels like: " + data1.weather[0].description;
-//     var hum = "Humidity: " + obj.main.humidity + "% "
-//     // var temp_min_max = "Min: " + obj.main.temp_min + " | Max: " + obj.main.temp_max;
-//     var temp_min = "Min: " + obj.main.temp_min;
-//     var temp_max = "Max: " + obj.main.temp_max;
-//     res.render('index', { weather: obj, sit: descr, humidity: hum, city: obj.name, country: obj.sys.country, icon: obj.weather.icon, temp: "Temp:" + obj.main.temp, lon: obj.coord.lon, lat: obj.coord.lat, tempmin: temp_min, tempmax: temp_max, errmsg: null });
-// })
-// .catch((err) => {
-//     console.log(err);
-//     res.render('index', { weather: null, errmsg: 'City not Found' })
-// })

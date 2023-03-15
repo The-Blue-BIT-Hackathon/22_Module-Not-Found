@@ -68,6 +68,15 @@ const RoutePaths = (props) => {
 //     });
 // }, [])
 
+axios.get("http://localhost:5000/getcities/pune/lonavla")
+.then((res)=>{
+  if(res.status===200){
+    console.log(res);
+    console.log(res.json());
+    setInterCity(res);
+  }
+})
+
 const timelines = intermediateCity.map((item) => {
   console.log("Printing items: ",item);
   return <TimelineCard city={item} />;

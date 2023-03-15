@@ -11,72 +11,127 @@ import Recovery from './components/Recovery';
 import Reset from './components/Reset';
 import PageNotFound from './components/PageNotFound';
 import Username from './components/Username';
+import Travel from './components/Travel';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Weather from './components/Weather';
+import LandingPage from './pages/LandingPage';
+import Stay from './components/Stay';
+import RoutePaths from './components/RoutePaths';
+import SomethingWentWrong from './components/SomethingWentWrong';
+import SearchResult from './components/SearchResult';
+// import city from './city';
+
+
+
 
 // const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <Root />,
+//     loader: rootLoader,
+//     children: [
+//       {
+//         path: "team",
+//         element: <Team />,
+//         loader: teamLoader,
+//       },
+//     ],
+//   },
+// ]);
+
+
+// export const router = createBrowserRouter([
 //     {
 //         path : '/',
-//         element : <HomePage/>
-        
+//         element: <HomePage/>,
+//         children:[
+//           {
+//             path: "/city",
+//             element: <Navbar/>,
+//           }
+//         ],  
 //     },
-//     {
+//     ])
+//         {
 //         path: '/register',
-//         element : <Register></Register>
+//         element : <Register/>
 //     },
 //     {
 //         path: '/password',
-//         element : <Password></Password>
+//         element : <Password/>
 //     },
 //     {
 //         path: '/profile',
-//         element : <Profile></Profile>
+//         element : <Profile/>
 //     },
 //     {
 //         path: '/recovery',
-//         element : <Recovery></Recovery>
+//         element : <Recovery/>
 //     },
 //     {
 //         path: '/reset',
-//         element : <Reset></Reset>
+//         element : <Reset/>
 //     },
 //     {
 //         path: '/username',
-//         element : <Username></Username>
+//         element : <Username/>
 //     },
 //     {
 //         path: '*',
-//         element: <PageNotFound></PageNotFound>
+//         element: <PageNotFound/>
 //     },
 // ])
 
 export default function App() {
   return (
     <>
-      {/* <RouterProvider router={router}></RouterProvider> */}
-      <Navbar/>
-      <Outlet/>
-      <Footer/>
+      <Router>
+        {/* <Navbar /> */}
+        <Routes>
+          <Route path="/" element={<LandingPage />} >
+              <Route index element = {<HomePage/>}/>
+              <Route path='/weather/:citysearch' element={<Weather />} />
+              <Route path='/travel' element={<Travel/>} />
+              <Route path='/hotel' element={<Stay/>} />
+              <Route path='/route' element={<RoutePaths/>} />
+              <Route path='/error' element={<SomethingWentWrong/>} />
+              <Route path='/search' element={<SearchResult/>} />
+
+
+              
+
+
+          </Route>
+          {/* <Route exact path="/travel" element={<Travel />} /> */}
+          {/* <Route exact path="/timeline" element={<Time />} /> */}
+          {/* <Route exact path="/create" element={<Create />} /> */}
+          {/* <Route exact path="/login" element={<Login />} /> */}
+          {/* <Route exact path="/success" element={<Success />} /> */}
+        </Routes>
+        {/* <Footer/> */}
+    </Router>
     </>
   )
 }
 
-export const Approuter = createBrowserRouter([
-    {
-        path : '/',
-        element : <App/>,
-        errorElement : <Error/>,
-        children: [
-          {
-            path: '/',
-            element : <HomePage />
-        },
-        {
-          path: '/register',
-          element : <div>Register Route</div>
-      },
-        ]
-    },
+// export const Approuter = createBrowserRouter([
+//     {
+//         path : '/',
+//         element : <App/>,
+//         errorElement : <Error/>,
+//         children: [
+//           {
+//             path: '/',
+//             element : <HomePage />
+//         },
+//         {
+//           path: '/register',
+//           element : <div>Register Route</div>
+//       },
+//         ]
+//     },
     
-])
+// ])
 
 
 

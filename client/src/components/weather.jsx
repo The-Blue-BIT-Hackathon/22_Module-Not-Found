@@ -1,7 +1,6 @@
 import '../styles/weather.css';
 import { useState } from 'react';
 import axios from 'axios';
-import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../assets/weather.png";
 const Weather = (props) =>  {
   const [data, setData] = useState({})
@@ -26,7 +25,7 @@ const Weather = (props) =>  {
     getWeatherDetails(nameOfCity);
   return (<>
     {Object.keys(data).length > 0 &&
-    <div className="col-md-12 text-center mt-5">
+    <div>
         <div className="shadow rounded weatherResultBox">
            <img className="weatherIcon" src={logo} alt="weatherlogo"/>
            <h5 className="weatherCity">{data?.name}</h5>

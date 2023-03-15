@@ -1,7 +1,6 @@
 import React from "react";
 
 const TimelineCard = (props) => {
-    console.log(props.city)
   return (
     <div>
       <li className="mb-10 ml-4 w-1/2 mx-auto">

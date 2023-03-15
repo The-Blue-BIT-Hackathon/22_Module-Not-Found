@@ -11,7 +11,8 @@ const app = express()
 const { cities } = require('./config/cities-name-list')
 app.use(bodyParser.urlencoded({ extended: true }));
 require('dotenv').config()
-const authRoute = require('./routes/auth')
+const authRoute=require('./routes/auth')
+const cors = require("cors");
 
 //middleware
 app.use(express.json());
@@ -21,7 +22,7 @@ const axios = require('axios')
 const CookieParser = require('cookie-parser')
 
 app.use(CookieParser());
-
+app.use(cors());
 
 app.get('/', (req, res) => {
   const acc_token = req.cookies.jwtoken;

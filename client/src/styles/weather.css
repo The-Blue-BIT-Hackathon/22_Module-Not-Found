@@ -11,11 +11,15 @@
     font-weight: 700;
   }
   .weatherResultBox{
-    margin: auto;
-    width: 500px;
-    height: 300px;
+    margin: 2rem auto;
+    width: 50%;
+    height: 100%;
+    /* border: 2px black solid; */
+    text-align: center;
+    padding-bottom: 2rem;
   }
   .weatherIcon{
+    margin: 0 auto;
     margin-top: 2rem;
     width: 100px;
     height: 100px;

@@ -1,15 +1,15 @@
 import '../styles/weather.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import logo from "../assets/weather.png";
 const Weather = (props) =>  {
   const [data, setData] = useState({})
   const [inputCity, setInputCity] = useState("");
   let nameOfCity = props.cityName;
-  const getWeatherDetails = (nameOfCity) =>{
-    if(!nameOfCity) return;
-    console.log(process.env.REACT_APP_OPENAPI_KEY);
-    const apiURL = "https://api.openweathermap.org/data/2.5/weather?q="+nameOfCity+"&APPID="+process.env.REACT_APP_OPENAPI_KEY;
+
+  const apiURL = "https://api.openweathermap.org/data/2.5/weather?q="+nameOfCity+"&APPID="+process.env.REACT_APP_OPENAPI_KEY;
+
+  useEffect(()=>{
     axios.get(apiURL).then((res)=>{
       console.log("response", res.data);
       setData(res.data);
@@ -21,12 +21,15 @@ const Weather = (props) =>  {
         }
         console.log("error", err);
       })
+  }, [apiURL])
+  const getWeatherDetails = (nameOfCity) =>{
+    if(!nameOfCity) return;
     };
     getWeatherDetails(nameOfCity);
   return (<>
     {Object.keys(data).length > 0 &&
     <div>
-        <div className="shadow-lg shadow-gray-400 rounded-2xl weatherResultBox">
+        <div className="shadow-lg shadow-gray-400 rounded- weatherResultBox">
            <img className="weatherIcon" src={logo} alt="weatherlogo"/>
            <h5 className="weatherCity">{data?.name}</h5>
            <h6 className="weatherTemp">{((data?.main?.temp)-273.15).toFixed(2)}<sup>o</sup>C</h6>

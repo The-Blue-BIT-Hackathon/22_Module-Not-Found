@@ -71,7 +71,7 @@ const ValidCity = (cityName) => {
 
 }
 
-app.get('search/:cityname', async (req, res) => {
+app.get('/search/:cityname', async (req, res) => {
 
   const cityName = req.params.cityname;
   console.log('THe city is :'.cityName);
@@ -102,7 +102,7 @@ app.get('/getcities/:city/:dest_city', (req, res) => {
         const arr = [];
         arr.push(resp2.data.features[0].lat);
         arr.push(resp2.data.features[0].lon);
-        console.log(resp2.data.features[0].properties.lat);
+        console.log("here",resp2.data.features[0].properties.lat);
         src_lat = resp2.data.features[0].properties.lat;
         src_longitude = resp2.data.features[0].properties.lon;
         

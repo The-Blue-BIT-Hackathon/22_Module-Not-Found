@@ -90,48 +90,19 @@ export default function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} >
               <Route index element = {<HomePage/>}/>
-              <Route path='/weather/:citysearch' element={<Weather />} />
               <Route path='/travel' element={<Travel/>} />
               <Route path='/hotel' element={<Stay/>} />
               <Route path='/route' element={<RoutePaths/>} />
               <Route path='/error' element={<SomethingWentWrong/>} />
               <Route path='/search' element={<SearchResult/>} />
 
-
-              
-
-
           </Route>
-          {/* <Route exact path="/travel" element={<Travel />} /> */}
-          {/* <Route exact path="/timeline" element={<Time />} /> */}
-          {/* <Route exact path="/create" element={<Create />} /> */}
-          {/* <Route exact path="/login" element={<Login />} /> */}
-          {/* <Route exact path="/success" element={<Success />} /> */}
         </Routes>
         {/* <Footer/> */}
     </Router>
     </>
   )
 }
-
-// export const Approuter = createBrowserRouter([
-//     {
-//         path : '/',
-//         element : <App/>,
-//         errorElement : <Error/>,
-//         children: [
-//           {
-//             path: '/',
-//             element : <HomePage />
-//         },
-//         {
-//           path: '/register',
-//           element : <div>Register Route</div>
-//       },
-//         ]
-//     },
-    
-// ])
 
 
 

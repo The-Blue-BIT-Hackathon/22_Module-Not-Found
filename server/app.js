@@ -33,24 +33,51 @@ app.get('/', (req, res) => {
 })
 app.use('/travel/auth', authRoute);
 
-app.get('/getNearbyPlaces', async (req, res) => {
-  const arr = [];
+// app.get('/getNearbyPlaces/:cityname', async (req, resp) => {
+//   const arr = [];
+//   console.log('showing city name is: ',req.params.cityname)
+//   try {
+//     const url = `http://dev.virtualearth.net/REST/V1/Routes/LocalInsights?Waypoint=${req.params.cityname}&TravelMode=Driving&Optimize=time&MaxTime=60&TimeUnit=Minute&type=HotelsAndMotels&key=AlTC9he2DiTAaibqX9oBK9WwGxo10wPsfla-myVg5jEmYyE_gPO9_Goo_S1WEUYL`
+//     // console.log(url);
+//    axios.get(url)
+//    .then((res)=>{res.json()})
+//    .then((data)=>{
+//     // resp.json();
+//     console.log(data);
+//     resp.status(200).json(data) ;
+//    })
+
+//  }
+//   catch(err)
+//   {
+//     console.log(err);
+//     res.status(404).json(err); 
+//   }
+// })
+
+
+app.get('/getNearbyHotels/:cityname',async(req,res)=>{
   try {
-    const url = `http://dev.virtualearth.net/REST/V1/Routes/LocalInsights?Waypoint=Pune,Maharashtra,India&TravelMode=Driving&Optimize=time&MaxTime=60&TimeUnit=Minute&type=HotelsAndMotels&key=AlTC9he2DiTAaibqX9oBK9WwGxo10wPsfla-myVg5jEmYyE_gPO9_Goo_S1WEUYL`
+    const url = `http://dev.virtualearth.net/REST/V1/Routes/LocalInsights?Waypoint=${req.params.cityname}&TravelMode=Driving&Optimize=time&MaxTime=60&TimeUnit=Minute&type=HotelsAndMotels&key=AlTC9he2DiTAaibqX9oBK9WwGxo10wPsfla-myVg5jEmYyE_gPO9_Goo_S1WEUYL`
+    const response = await fetch(url);
 
-    const resp = await fetch(url, {
-      method: "GET",
-      headers: {
-        "Content-type": "application/json"
+    if (response.status!=200 && !response.ok) {
+      throw new Error(`Error! status: ${response.status}`);
+    }
+
+    // ✅ call response.json() here
+    const result = await response.json();
+      const arr=[];
+      for(const v of result.resourceSets[0].resources[0].categoryTypeResults[0].entities)
+      {
+        arr.push(v.entityName)
       }
-    })
-      .then((resp) => res.json())
-      .then((data) => {
 
-      })
-  }
-  catch (err) {
-
+    res.status(200).json(arr);
+    // res.status(200).json(result.resourceSets[0].resources[0].categoryTypeResults[0].entities);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
   }
 })
 
@@ -70,7 +97,7 @@ const ValidCity = (cityName) => {
 
 }
 
-app.get('search/:cityname', async (req, res) => {
+app.get('/search/:cityname', async (req, res) => {
 
   const cityName = req.params.cityname;
   console.log('THe city is :'.cityName);
@@ -101,7 +128,7 @@ app.get('/getcities/:city/:dest_city', (req, res) => {
         const arr = [];
         arr.push(resp2.data.features[0].lat);
         arr.push(resp2.data.features[0].lon);
-        console.log(resp2.data.features[0].properties.lat);
+        console.log('latitude is: ',resp2.data.features[0].properties.lat);
         src_lat = resp2.data.features[0].properties.lat;
         src_longitude = resp2.data.features[0].properties.lon;
         

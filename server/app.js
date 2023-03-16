@@ -232,7 +232,6 @@ app.get('/getcities/:city/:dest_city', (req, res) => {
     }
 
     let src_lat = 18.5204, src_longitude = 73.8567, dest_lat = 18.7557, dest_longitude = 73.4091;
-  
     axios.get(`https://api.geoapify.com/v1/geocode/search?city=${req.params.city}&apiKey=0d9568502cca49a29d3861244023e2f1`)
       .then((resp2) => {
         const arr = [];
@@ -381,7 +380,7 @@ const options = {
   url: 'https://flight-info-api.p.rapidapi.com/schedules',
   params: {version: 'v1', DepartureDate: req.params.date, DepartureAirport: srcCityData.code, ArrivalAirport: destCityData.code},
   headers: {
-    'X-RapidAPI-Key': '4a6d3ede98mshe92ec2c19da2da7p138868jsna5091e38344a',
+    'X-RapidAPI-Key': 'c47494898fmsh5572f17ac918956p156912jsnfff1bdd964cb',
     'X-RapidAPI-Host': 'flight-info-api.p.rapidapi.com'
   }
 };

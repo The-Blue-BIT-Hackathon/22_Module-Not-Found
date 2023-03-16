@@ -3,8 +3,8 @@ import TrainCard from "./TrainCard";
 import { useState, useEffect } from "react";
 
 const Travel = (props) => {
-  const trainDetails = props.arr;
-  console.log("inside travel traindetails: ",trainDetails[0]);
+  const trainDetails = props.arr.data;
+  console.log("inside travel traindetails: ",trainDetails.data);
 
   console.log("checking data attached with trainDetails", trainDetails[0].train_number, trainDetails[0].train_destination_station);
   return (

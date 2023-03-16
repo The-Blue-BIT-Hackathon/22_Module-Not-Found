@@ -5,7 +5,6 @@ import "../styles/ReviewForm.css";
 import cities from "../config/cities-name-list";
 import city from "../config/city";
 import axios from "axios";
-import { response } from "express";
 
 const GiveFeedBackPage = () => {
   const [reviewData, setReviewData] = useState({
@@ -72,29 +71,64 @@ const GiveFeedBackPage = () => {
 
   function handleRating(event){
     setReviewData((prev) => {
-        return { ... prev, rating: event.target.value}
+        return { ...prev, rating: event.target.value}
     })
   }
 
-  function handleSubmit(){
-    const options = {
-        method: 'GET',
-        url: 'http://localhost:5000/feedback/addReview',
-        body: {reviewData}
-      };
+  
+  // const handleSubmit = async event => {
+  //     event.preventDefault();
+  
+  //     try {
+  //       const requestData = {
+  //         method: 'POST',
+  //         headers:{
+  //            'Content-Type': 'application/json'
+  //         },
+  //         body: JSON.stringify(this.state)
+  //       };
+      
+  //      }catch (error) {
+  //         console.log(error);
+  //      }
+  // }
 
-      axios.request(options).then(function (response) {
-        console.log(response.data);
-        response.status(200).json(response.data);
-      }).catch(function (error) {
-        console.error(error);
-        response.status(404).json(error);
-      });
-  }
+  const handleSubmit = (e) => {
+
+    e.preventDefault();
+
+    const url = 'http://localhost:5000/post/data';
+
+    const user = {reviewData}
+
+    axios.post(url, user).then((res) => {
+        //handle your login 
+        console.log("Posted Successfully!");
+
+    }).catch((e) => {
+
+        //handle your errors
+        console.log(e);
+    });
+
+}
+  
 
   return (
     <div>
-      <div className="search-bar">
+      <div
+          className="banner w-full px-4 py-10
+       bg-teal-500 flex-col justify-start items-center"
+        >
+          <h1 className="text-center font-bold text-5xl">
+           Add a review Help others!
+          </h1>
+          
+        </div>
+      <div>
+        <form className="w-[750px] p-5 mt-10 mb-10 mx-auto rounded-lg border border-gray-300 shadow-xl shadow-gray-200">
+        <div className="search-bar mb-3">
+          <label className="peer-focus:font-medium text-sm">City Name</label>
         <Select
           aria-labelledby="aria-label"
           inputId="aria-example-input"
@@ -106,8 +140,6 @@ const GiveFeedBackPage = () => {
           className="w-full"
         />
       </div>
-      <div>
-        <form className="w-[750px] p-5 mt-10 mx-auto rounded-lg border border-gray-300 shadow-xl shadow-gray-200">
           <div className="grid md:grid-cols-2 md:gap-6">
             <div className="relative z-0 w-full mb-6 group">
               <input
@@ -124,7 +156,7 @@ const GiveFeedBackPage = () => {
                 for="name"
                 className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
-                Name
+                Your Good Name
               </label>
             </div>
           </div>

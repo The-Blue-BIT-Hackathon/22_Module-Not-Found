@@ -134,7 +134,7 @@ const HomePage = () => {
           <h1 className="text-center font-bold text-5xl">
             Where are you planning to go?
           </h1>
-          <p className="text-center mt-6">lorem erpsun dolor msfnnfl</p>
+          <p className="text-center mt-6">Let's Go!</p>
         </div>
         <div className="selections flex item-center justify-around  w-[70%] ml-auto mr-auto p-4 shadow-xl shadow-gray-200 rounded-lg">
           <form className="md:w-[30%] sm:w-[100%] flex-col justify-center">

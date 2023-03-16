@@ -7,7 +7,7 @@ const helmet = require('helmet')
 const morgan = require('morgan')
 const bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken')
-
+const destination = require('./models/destination')
 
 const app = express()
 const { cities } = require('./config/cities-name-list')
@@ -36,6 +36,38 @@ app.get('/', (req, res) => {
 
   console.log(data)
   res.send({ username: 'mangesh' });
+})
+app.post('/travels/feedback/addReview',async(req,res)=>{
+  // const ans=JSON.parse(req.body)
+console.log(req.body.Body)
+const data=JSON.parse(req.body.Body)
+console.log(data);
+console.log('location is : ',data.location)
+ const findcity = await destination.findOne({ cityName: data.location });
+ try
+ {
+  
+          // console.log(rev_data);
+   
+        const city = new destination({
+            cityName: data.location,
+            username:data.name,
+            review:data.review,
+            rating:data.rating
+          });  
+            const dest_city=await city.save()
+          // const rev_data={};
+         
+          res.status(200).json(req.body)
+      
+         
+    
+    }
+    catch(err)
+    {
+      console.log(err);
+      res.status(404).json(err);
+    }
 })
 app.use('/travel/auth', authRoute);
 app.use('/feedback',feedbackRoute);

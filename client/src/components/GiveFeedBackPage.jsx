@@ -5,7 +5,7 @@ import "../styles/ReviewForm.css";
 import cities from "../config/cities-name-list";
 import city from "../config/city";
 import axios from "axios";
-import { response } from "express";
+// import { response } from "express";
 
 const GiveFeedBackPage = () => {
   const [reviewData, setReviewData] = useState({
@@ -77,19 +77,27 @@ const GiveFeedBackPage = () => {
   }
 
   function handleSubmit(){
-    const options = {
-        method: 'GET',
-        url: 'http://localhost:5000/feedback/addReview',
-        body: {reviewData}
-      };
+    
+        // method: 'GET',
+       const url='http://localhost:5000/travels/feedback/addReview';
+      // const    body={reviewData}
+  
+    
 
-      axios.request(options).then(function (response) {
-        console.log(response.data);
-        response.status(200).json(response.data);
-      }).catch(function (error) {
-        console.error(error);
-        response.status(404).json(error);
-      });
+      axios.post(url, {
+        Method: 'POST',
+        Headers: {
+          Accept: 'application.json',
+          'Content-Type': 'application/json'
+        },
+        Body: JSON.stringify(reviewData),
+        Cache: 'default'
+      })
+      .then((res)=>{res.json()
+              console.log(res)})
+      .catch((err)=>{err.json()
+          console.log(err)
+        });
   }
 
   return (

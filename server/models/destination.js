@@ -7,14 +7,21 @@ const destSchema=new mongoose.Schema(
             required:true,
 
         },
+        username:{
+            type:String,
+            required:true,
+        },
         review:{
-            type:Array,
-            default:[]
+            type:String,
+    
         },
-        score:{
+        rating:
+        {
             type:Number,
-            default:0
         },
+
+    
+    
     
 
     },

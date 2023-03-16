@@ -34,31 +34,62 @@ app.get('/', (req, res) => {
 })
 app.use('/travel/auth', authRoute);
 
-// app.get('/getNearbyPlaces/:cityname', async (req, resp) => {
-//   const arr = [];
-//   console.log('showing city name is: ',req.params.cityname)
-//   try {
-//     const url = `http://dev.virtualearth.net/REST/V1/Routes/LocalInsights?Waypoint=${req.params.cityname}&TravelMode=Driving&Optimize=time&MaxTime=60&TimeUnit=Minute&type=HotelsAndMotels&key=AlTC9he2DiTAaibqX9oBK9WwGxo10wPsfla-myVg5jEmYyE_gPO9_Goo_S1WEUYL`
-//     // console.log(url);
-//    axios.get(url)
-//    .then((res)=>{res.json()})
-//    .then((data)=>{
-//     // resp.json();
-//     console.log(data);
-//     resp.status(200).json(data) ;
-//    })
+app.get('/getNearbyAccesories/:cityName',async(req,res)=>{
+  try {
+    console.log(req.params.cityName)
+    const url = `http://dev.virtualearth.net/REST/V1/Routes/LocalInsights?Waypoint=${req.params.cityName}&TravelMode=Driving&Optimize=time&MaxTime=60&TimeUnit=Minute&type=SeeDo,Shop&key=AlTC9he2DiTAaibqX9oBK9WwGxo10wPsfla-myVg5jEmYyE_gPO9_Goo_S1WEUYL`
 
-//  }
-//   catch(err)
-//   {
-//     console.log(err);
-//     res.status(404).json(err); 
-//   }
-// })
 
+    const response = await fetch(url);
+
+    if (response.status!=200 && !response.ok) {
+      throw new Error(`Error! status: ${response.status}`);
+    }
+
+    // ✅ call response.json() here
+    const result = await response.json();
+      const arr={};
+      console.log(result.resourceSets[0].resources[0].categoryTypeResults.length);
+      for(var i=0;i<result.resourceSets[0].resources[0].categoryTypeResults.length;i++)
+      {
+        const category=result.resourceSets[0].resources[0].categoryTypeResults[i].categoryTypeName;
+        console.log("Category: ",category)
+        if(category=='See Do')
+        result.resourceSets[0].resources[0].categoryTypeResults[i].categoryTypeName='SeeDo'
+        // console.log(result.resourceSets[0].resources[0].categoryTypeResults[i].entities);
+        arr[`${result.resourceSets[0].resources[0].categoryTypeResults[i].categoryTypeName}`]=[];
+        console.log( typeof( arr[`${result.resourceSets[0].resources[0].categoryTypeResults[i].categoryTypeName}`]))
+        for(const v of result.resourceSets[0].resources[0].categoryTypeResults[i].entities)
+        {
+          arr[result.resourceSets[0].resources[0].categoryTypeResults[i].categoryTypeName].push(v.entityName);
+        }
+        // if(categorized.length>0)arr.push(categorized)
+      }
+     
+      // console.log('Arr is as follows');
+      const keys=Object.keys(arr);
+      console.log('The keys are as follows: ',keys);
+      // for(const v of keys)
+      // {
+      //   console.log('Getting the properties from the value of the keys:')
+      //   console.log(v)
+      //   console.log(arr[v]);
+      //   console.log('Going to get the next property')
+      // }
+
+    res.status(200).json(arr);
+
+
+    // res.status(200).json(result.resourceSets[0].resources[0].categoryTypeResults[0].entities);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+})
 
 app.get('/getNearbyHotels/:cityname',async(req,res)=>{
   try {
+    // console.log(url)
     const url = `http://dev.virtualearth.net/REST/V1/Routes/LocalInsights?Waypoint=${req.params.cityname}&TravelMode=Driving&Optimize=time&MaxTime=60&TimeUnit=Minute&type=HotelsAndMotels&key=AlTC9he2DiTAaibqX9oBK9WwGxo10wPsfla-myVg5jEmYyE_gPO9_Goo_S1WEUYL`
     const response = await fetch(url);
 
@@ -68,11 +99,15 @@ app.get('/getNearbyHotels/:cityname',async(req,res)=>{
 
     // ✅ call response.json() here
     const result = await response.json();
+    console.log(result.resourceSets[0].resources[0].categoryTypeResults.length);
+
       const arr=[];
       for(const v of result.resourceSets[0].resources[0].categoryTypeResults[0].entities)
       {
         arr.push(v.entityName)
       }
+
+        
 
     res.status(200).json(arr);
     // res.status(200).json(result.resourceSets[0].resources[0].categoryTypeResults[0].entities);
@@ -106,12 +141,7 @@ app.get('/search/:cityname', async (req, res) => {
 
 })
 
-function getCoordinates(cityName) {
-  console.log('Name of the city is: ', cityName)
 
-
-
-}
 app.get('/getcities/:city/:dest_city', (req, res) => {
   try {
 

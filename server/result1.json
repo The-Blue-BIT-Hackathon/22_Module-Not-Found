@@ -1,0 +1,23 @@
+{
+    "batchcomplete": "",
+    "query": {
+        "normalized": [
+            {
+                "from": "mumbai",
+                "to": "Mumbai"
+            }
+        ],
+        "pages": {
+            "19189": {
+                "pageid": 19189,
+                "ns": 0,
+                "title": "Mumbai",
+                "original": {
+                    "source": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Mum103.png",
+                    "width": 2096,
+                    "height": 1072
+                }
+            }
+        }
+    }
+}

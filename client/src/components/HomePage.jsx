@@ -17,6 +17,7 @@ import "../index.css";
 import Weather from "./Weather";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import GiveFeedBackPage from "./GiveFeedBackPage";
 
 //contexts
 const travelContext = createContext();
@@ -218,6 +219,7 @@ const HomePage = () => {
           </div>
         )}
       </div>
+      <GiveFeedBackPage />
     </>
   );
 };

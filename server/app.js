@@ -16,6 +16,7 @@ const Station_codes=require('./config/Railway Stations.json')
 app.use(bodyParser.urlencoded({ extended: true }));
 require('dotenv').config()
 const authRoute=require('./routes/auth')
+const feedbackRoute=require('./routes/feedback')
 const cors = require("cors");
 
 //middleware
@@ -37,6 +38,7 @@ app.get('/', (req, res) => {
   res.send({ username: 'mangesh' });
 })
 app.use('/travel/auth', authRoute);
+app.use('/feedback',feedbackRoute);
 
 app.get('/getNearbyAccesories/:cityName',async(req,res)=>{
   try {
@@ -378,6 +380,22 @@ axios.request(options).then(function (response) {
 })
 
 
+
+
+app.get('/getDestinationCityData/:destCity',async(req,res)=>{
+  
+  // const url=`https://en.wikipedia.org/w//api.php?action=query&format=json&list=allimages&aifrom=${req.params.destCity}&ailimit=10`
+  const url=`https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&piprop=original&titles=${req.params.destCity}`
+  axios.request(url).then(function (response) {
+    console.log(response.data.query.pages);
+    const keys=Object.keys(response.data.query.pages);
+    console.log('The keys are as follows: ',keys);
+    res.status(200).json(response.data.query.pages[keys[0]].original);
+  }).catch(function (error) {
+    console.error(error);
+    res.status(404).json(error);
+  });
+})
 app.listen(5000, () => {
   console.log("App is listening at port 5000...");
 });

@@ -16,6 +16,7 @@ import Travel from "./Travel";
 import Map from "./Map";
 import Weather from "./Weather";
 import RoutingMachine from "./RoutingMachine";
+import PlaceDetailsPage from './PlaceDetailsPage'
 import axios from "axios";
 const SearchResult = () => {
   console.log("inside search result");
@@ -103,6 +104,7 @@ const SearchResult = () => {
           </Tabs.Item>
         </Tabs.Group>
       </div>
+      <PlaceDetailsPage />
     </>
   );
 };

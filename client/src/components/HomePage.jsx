@@ -109,8 +109,6 @@ const HomePage = () => {
 
 
 
-
-
   return (
     <div>
       <div className="banner w-full p-4 bg-teal-500 flex-col justify-start items-center">
@@ -143,7 +141,7 @@ const HomePage = () => {
         </form>
         <div className="calendar-container w-[30%] flex-col justify-center">
           <h4 className="mb-2" style={style.label}>Date</h4>
-          <input type="date" className="w-full" onChange={handleDateChange} value={date} />
+          <input type="date" className="w-full border-black" onChange={handleDateChange} value={date} />
         </div>
         <button onClick={handleSubmit} className="bg-cyan-200 h-8 px-6 rounded-lg my-auto w-[25%]">Search</button>
       </div>

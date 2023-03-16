@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const User = require('../models/users');
+const destination = require('../models/destination');
 const {addReview}=require('../controllers/destController')
 const bcrypt = require('bcrypt')
 
@@ -7,5 +7,5 @@ const bcrypt = require('bcrypt')
 //REGISTER
 router.post('/addReview', addReview);
 //LOGIN
-router.post("/login", login);
+// router.post("/login", login);
 module.exports = router

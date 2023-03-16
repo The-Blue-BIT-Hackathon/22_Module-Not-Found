@@ -29,6 +29,7 @@ const addReview=async(req,res)=>{
     //     findcity.
     //  }
 }
-const recommedCities=async(req,res)=>{
-    c
-}
+// const recommedCities=async(req,res)=>{
+//     c
+// }
+module.exports={addReview}

@@ -16,6 +16,7 @@ const Station_codes=require('./config/Railway Stations.json')
 app.use(bodyParser.urlencoded({ extended: true }));
 require('dotenv').config()
 const authRoute=require('./routes/auth')
+const feedbackRoute=require('./routes/feedback')
 const cors = require("cors");
 
 //middleware
@@ -37,6 +38,7 @@ app.get('/', (req, res) => {
   res.send({ username: 'mangesh' });
 })
 app.use('/travel/auth', authRoute);
+app.use('/feedback',feedbackRoute);
 
 app.get('/getNearbyAccesories/:cityName',async(req,res)=>{
   try {

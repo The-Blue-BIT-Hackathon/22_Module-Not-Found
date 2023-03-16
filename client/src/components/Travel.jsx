@@ -1,36 +1,30 @@
 import React from "react";
-import traindata from "../config/traindata";
 import TrainCard from "./TrainCard";
 import { useState, useEffect } from "react";
 
-const Travel = () => {
-  const [trainDetails, setTrainDetails] = useState([]);
+const Travel = (props) => {
+  const trainDetails = props.arr;
+  console.log("inside travel traindetails: ",trainDetails[0]);
 
-  useEffect(() => {
-    setTrainDetails(traindata);
-  }, []);
-
-  const cards = trainDetails.map((item) => {
-    return (
-      <div className="my-10">
-      <TrainCard
-        id={item.id}
-        name={item.name}
-        start={item.start}
-        end={item.end}
-      />
-      </div>
-    );
-  });
-
-  return(
+  console.log("checking data attached with trainDetails", trainDetails[0].train_number, trainDetails[0].train_destination_station);
+  return (
     <>
-    <h1 className="text-center mx-auto mb-6 font-bold text-3xl">How can you get there</h1>
-    <div className="mx-auto">
-    {cards}
-    </div>
+      <h1 className="text-center mx-auto mb-6 font-bold text-3xl">
+        How can you get there
+      </h1>
+      <div className="mx-auto">
+        {trainDetails.map((item) => (
+          <TrainCard
+            id={item.train_number}
+            name={item.train_name}
+            start={item.train_origin_station}
+            end={item.train_destination_station}
+          />
+        )
+        )}
+      </div>
     </>
-  )
+  );
 };
 
 export default Travel;

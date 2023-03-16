@@ -143,7 +143,7 @@ app.get('/getcities/:city/:dest_city', (req, res) => {
             method: "GET",
             headers: {
               "Content-Type": "application/json",
-  
+   
             }
           })
             .then((resp) => resp.json())

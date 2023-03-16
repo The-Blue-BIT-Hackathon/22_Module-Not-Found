@@ -6,7 +6,7 @@ import React, {
   createContext,
 } from "react";
 import Select, { AriaOnFocus } from "react-select";
-import city from "../city";
+import city from "../config/city";
 import Card from "./Card";
 import cities from "../config/cities-name-list";
 import Travel from "./Travel";
@@ -89,7 +89,7 @@ const HomePage = () => {
           console.log("location :", location);
           if (res.status === 200) {
             console.log("res status 200");
-            navigate("/search?source=" + location + "&destination="+ destination);
+            navigate("/search?source=" + location + "&destination="+ destination + "&traveldate="+date);
           } else {
             navigate("/error");
           }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Tabs } from "flowbite-react";
 import { Link, useLocation } from "react-router-dom";
 import useQuery from "../hooks/useQuery";
@@ -7,21 +7,69 @@ import HotelIcon from "@mui/icons-material/Hotel";
 import TrainIcon from "@mui/icons-material/Train";
 import MapIcon from "@mui/icons-material/Map";
 import CloudIcon from "@mui/icons-material/Cloud";
+import FlightIcon from '@mui/icons-material/Flight';
 import { useNavigate } from "react-router-dom";
 import RoutePaths from "./RoutePaths";
 import Stay from "./Stay";
+import Flight from "./Flight";
 import Travel from "./Travel";
 import Map from "./Map";
 import Weather from "./Weather";
 import RoutingMachine from "./RoutingMachine";
+import axios from "axios";
 const SearchResult = () => {
   console.log("inside search result");
   const navigate = useNavigate();
   const query = useQuery();
   const source = query.get("source") || "";
   const dest = query.get("destination") || "";
-  const url = useLocation();
-  console.log(url);
+  const dateOfTravel = query.get("traveldate") || "";
+  const [sourcePoint, setSourcePoint] = useState(null); 
+  const [destinationPoint, setDestinationPoint] = useState(null); 
+  const [trainData, setTrainData] = useState(null);
+  const [date, setDate] = useState(null);
+    useEffect(()=>{
+        fetch(`https://api.geoapify.com/v1/geocode/search?city=${source}&apiKey=`+process.env.REACT_APP_GEOAPIFY_KEY)
+        .then((res) => {
+            return res.json();
+        })
+        .then(data => {
+            let arr = [data.features[0].properties.lat, data.features[0].properties.lon];
+            setSourcePoint(arr);
+        })
+    },[source])
+
+    useEffect(()=>{
+        fetch(`https://api.geoapify.com/v1/geocode/search?city=${dest}&apiKey=`+process.env.REACT_APP_GEOAPIFY_KEY)
+        .then((res) => {
+            return res.json();
+        })
+        .then(data => {
+            let arr = [data.features[0].properties.lat, data.features[0].properties.lon];
+            setDestinationPoint(arr);
+        })
+    },[dest])
+
+const options = {
+  method: 'GET',
+  url: 'https://irctc1.p.rapidapi.com/api/v2/trainBetweenStations',
+  params: {fromStationCode: 'bju', toStationCode: 'bdts'},
+  headers: {
+    'X-RapidAPI-Key': '2ed89566efmsh1951dff08018b75p130b75jsn7121f0d8118ferror',
+    'X-RapidAPI-Host': 'irctc1.p.rapidapi.com'
+  }
+};
+
+useEffect(()=>{
+    axios.request(options).then(function (response) {
+        setTrainData(response.data.data);
+    }).catch(function (error) {
+        // navigate('/error');
+        console.error(error);
+    });
+},[])
+
+
   return (
     <>
       <div
@@ -40,21 +88,23 @@ const SearchResult = () => {
           </Tabs.Item>
 
           <Tabs.Item title="Hotels" icon={HotelIcon}>
-            {/* <Stay /> */}
+            <Stay destination={dest}/>
           </Tabs.Item>
 
           <Tabs.Item title="Trains" icon={TrainIcon}>
-            {/* <Travel /> */}
+            {trainData && <Travel arr={trainData}/>}
           </Tabs.Item>
 
           <Tabs.Item title="Map & Direction" icon={MapIcon}>
-            <Map></Map>
-            <Map/>
-            {/* <RoutingMachine/> */}
+            {sourcePoint && destinationPoint && <Map srclat={sourcePoint[0]} srclon={sourcePoint[1]} destlat={destinationPoint[0]} destlon={destinationPoint[1]}/>}
           </Tabs.Item>
 
           <Tabs.Item title="Weather" icon={CloudIcon}>
             <Weather cityName={dest} />
+          </Tabs.Item>
+            
+          <Tabs.Item title="Flights" icon={FlightIcon}>
+            <Flight src={source} dest={dest} date={dateOfTravel}/>
           </Tabs.Item>
         </Tabs.Group>
       </div>

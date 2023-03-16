@@ -6,9 +6,9 @@ const maps = {
   base: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
 };
 
-const Map = () => {
-  const [start, setStart] = useState([18.58, 73.86]);
-  const [end, setEnd] = useState([19.22, 76.94]);
+const Map = (props) => {
+  const start = [props.srclat, props.srclon];
+  const end = [props.destlat , props.destlon];
   return (
     <>
       <MapContainer

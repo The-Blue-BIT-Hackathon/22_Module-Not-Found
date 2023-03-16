@@ -1,44 +1,24 @@
-import React from 'react'
-import {createBrowserRouter, RouterProvider, Outlet, BrowserRouter } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer'
-import HomePage from './components/HomePage';
-import Error from './components/Error';
-import Password from './components/Password';
-import Register from './components/Register';
-import Profile from './components/Profile';
-import Recovery from './components/Recovery';
-import Reset from './components/Reset';
-import PageNotFound from './components/PageNotFound';
-import Username from './components/Username';
-import Travel from './components/Travel';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Weather from './components/Weather';
-import LandingPage from './pages/LandingPage';
-import Stay from './components/Stay';
-import RoutePaths from './components/RoutePaths';
-import SomethingWentWrong from './components/SomethingWentWrong';
-import SearchResult from './components/SearchResult';
-// import city from './city';
-
-
-
-
-// const router = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <Root />,
-//     loader: rootLoader,
-//     children: [
-//       {
-//         path: "team",
-//         element: <Team />,
-//         loader: teamLoader,
-//       },
-//     ],
-//   },
-// ]);
-
+import React from "react";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Outlet,
+  BrowserRouter,
+} from "react-router-dom";
+import HomePage from "./components/HomePage";
+import Error from "./components/Error";
+import Password from "./components/Password";
+import Register from "./components/Register";
+import Profile from "./components/Profile";
+import Recovery from "./components/Recovery";
+import Reset from "./components/Reset";
+import PageNotFound from "./components/PageNotFound";
+import Username from "./components/Username";
+import Travel from "./components/Travel";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+import SomethingWentWrong from "./components/SomethingWentWrong";
+import SearchResult from "./components/SearchResult";
 
 // export const router = createBrowserRouter([
 //     {
@@ -49,7 +29,7 @@ import SearchResult from './components/SearchResult';
 //             path: "/city",
 //             element: <Navbar/>,
 //           }
-//         ],  
+//         ],
 //     },
 //     ])
 //         {
@@ -86,25 +66,16 @@ export default function App() {
   return (
     <>
       <Router>
-        {/* <Navbar /> */}
         <Routes>
-          <Route path="/" element={<LandingPage />} >
-              <Route index element = {<HomePage/>}/>
-              <Route path='/travel' element={<Travel/>} />
-              <Route path='/hotel' element={<Stay/>} />
-              <Route path='/route' element={<RoutePaths/>} />
-              <Route path='/error' element={<SomethingWentWrong/>} />
-              <Route path='/search' element={<SearchResult/>} />
 
+          <Route path="/" element={<LandingPage />}>
+            <Route index element={<HomePage />} />
+            <Route path="/error" element={<SomethingWentWrong />} />
+            <Route path="/search" element={<SearchResult />} />
           </Route>
+
         </Routes>
-        {/* <Footer/> */}
-    </Router>
+      </Router>
     </>
-  )
+  );
 }
-
-
-
-
-

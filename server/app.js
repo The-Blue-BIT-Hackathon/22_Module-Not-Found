@@ -48,13 +48,38 @@ app.get('/getNearbyAccesories/:cityName',async(req,res)=>{
 
     // ✅ call response.json() here
     const result = await response.json();
-      const arr=[];
-      for(const v of result.resourceSets[0].resources[0].categoryTypeResults[0].entities)
+      const arr={};
+      console.log(result.resourceSets[0].resources[0].categoryTypeResults.length);
+      for(var i=0;i<result.resourceSets[0].resources[0].categoryTypeResults.length;i++)
       {
-        arr.push(v.entityName)
+        const category=result.resourceSets[0].resources[0].categoryTypeResults[i].categoryTypeName;
+        console.log("Category: ",category)
+        if(category=='See Do')
+        result.resourceSets[0].resources[0].categoryTypeResults[i].categoryTypeName='SeeDo'
+        // console.log(result.resourceSets[0].resources[0].categoryTypeResults[i].entities);
+        arr[`${result.resourceSets[0].resources[0].categoryTypeResults[i].categoryTypeName}`]=[];
+        console.log( typeof( arr[`${result.resourceSets[0].resources[0].categoryTypeResults[i].categoryTypeName}`]))
+        for(const v of result.resourceSets[0].resources[0].categoryTypeResults[i].entities)
+        {
+          arr[result.resourceSets[0].resources[0].categoryTypeResults[i].categoryTypeName].push(v.entityName);
+        }
+        // if(categorized.length>0)arr.push(categorized)
       }
+     
+      // console.log('Arr is as follows');
+      const keys=Object.keys(arr);
+      console.log('The keys are as follows: ',keys);
+      // for(const v of keys)
+      // {
+      //   console.log('Getting the properties from the value of the keys:')
+      //   console.log(v)
+      //   console.log(arr[v]);
+      //   console.log('Going to get the next property')
+      // }
 
-    res.status(200).json(result);
+    res.status(200).json(arr);
+
+
     // res.status(200).json(result.resourceSets[0].resources[0].categoryTypeResults[0].entities);
   } catch (err) {
     console.log(err);
@@ -74,11 +99,15 @@ app.get('/getNearbyHotels/:cityname',async(req,res)=>{
 
     // ✅ call response.json() here
     const result = await response.json();
+    console.log(result.resourceSets[0].resources[0].categoryTypeResults.length);
+
       const arr=[];
       for(const v of result.resourceSets[0].resources[0].categoryTypeResults[0].entities)
       {
         arr.push(v.entityName)
       }
+
+        
 
     res.status(200).json(arr);
     // res.status(200).json(result.resourceSets[0].resources[0].categoryTypeResults[0].entities);

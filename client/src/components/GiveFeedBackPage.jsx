@@ -75,44 +75,29 @@ const GiveFeedBackPage = () => {
     })
   }
 
+  function handleSubmit(){
+    
+        // method: 'GET',
+       const url='http://localhost:5000/travels/feedback/addReview';
+      // const    body={reviewData}
   
-  // const handleSubmit = async event => {
-  //     event.preventDefault();
-  
-  //     try {
-  //       const requestData = {
-  //         method: 'POST',
-  //         headers:{
-  //            'Content-Type': 'application/json'
-  //         },
-  //         body: JSON.stringify(this.state)
-  //       };
-      
-  //      }catch (error) {
-  //         console.log(error);
-  //      }
-  // }
+    
 
-  const handleSubmit = (e) => {
-
-    e.preventDefault();
-
-    const url = 'http://localhost:5000/post/data';
-
-    const user = {reviewData}
-
-    axios.post(url, user).then((res) => {
-        //handle your login 
-        console.log("Posted Successfully!");
-
-    }).catch((e) => {
-
-        //handle your errors
-        console.log(e);
-    });
-
-}
-  
+      axios.post(url, {
+        Method: 'POST',
+        Headers: {
+          Accept: 'application.json',
+          'Content-Type': 'application/json'
+        },
+        Body: JSON.stringify(reviewData),
+        Cache: 'default'
+      })
+      .then((res)=>{res.json()
+              console.log(res)})
+      .catch((err)=>{err.json()
+          console.log(err)
+        });
+  }
 
   return (
     <div>

@@ -28,46 +28,41 @@ const SearchResult = () => {
   const [destinationPoint, setDestinationPoint] = useState(null); 
   const [trainData, setTrainData] = useState(null);
   const [date, setDate] = useState(null);
-    useEffect(()=>{
-        fetch(`https://api.geoapify.com/v1/geocode/search?city=${source}&apiKey=`+process.env.REACT_APP_GEOAPIFY_KEY)
-        .then((res) => {
-            return res.json();
-        })
-        .then(data => {
-            let arr = [data.features[0].properties.lat, data.features[0].properties.lon];
-            setSourcePoint(arr);
-        })
-    },[source])
+    // useEffect(()=>{
+    //     fetch(`https://api.geoapify.com/v1/geocode/search?city=${source}&apiKey=`+process.env.REACT_APP_GEOAPIFY_KEY)
+    //     .then((res) => {
+    //         return res.json();
+    //     })
+    //     .then(data => {
+    //         let arr = [data.features[0].properties.lat, data.features[0].properties.lon];
+    //         setSourcePoint(arr);
+    //     })
+    // },[source])
 
-    useEffect(()=>{
-        fetch(`https://api.geoapify.com/v1/geocode/search?city=${dest}&apiKey=`+process.env.REACT_APP_GEOAPIFY_KEY)
-        .then((res) => {
-            return res.json();
-        })
-        .then(data => {
-            let arr = [data.features[0].properties.lat, data.features[0].properties.lon];
-            setDestinationPoint(arr);
-        })
-    },[dest])
+    // useEffect(()=>{
+    //     fetch(`https://api.geoapify.com/v1/geocode/search?city=${dest}&apiKey=`+process.env.REACT_APP_GEOAPIFY_KEY)
+    //     .then((res) => {
+    //         return res.json();
+    //     })
+    //     .then(data => {
+    //         let arr = [data.features[0].properties.lat, data.features[0].properties.lon];
+    //         setDestinationPoint(arr);
+    //     })
+    // },[dest])
 
-const options = {
-  method: 'GET',
-  url: 'https://irctc1.p.rapidapi.com/api/v2/trainBetweenStations',
-  params: {fromStationCode: 'bju', toStationCode: 'bdts'},
-  headers: {
-    'X-RapidAPI-Key': '2ed89566efmsh1951dff08018b75p130b75jsn7121f0d8118ferror',
-    'X-RapidAPI-Host': 'irctc1.p.rapidapi.com'
-  }
-};
 
-useEffect(()=>{
-    axios.request(options).then(function (response) {
-        setTrainData(response.data.data);
-    }).catch(function (error) {
-        // navigate('/error');
-        console.error(error);
-    });
-},[])
+    // useEffect(() => {
+    //     fetch(
+    //       `http://localhost:5000/getTrainSchedules/${source}/${dest}`
+    //     )
+    //       .then((res) => {
+    //         return res.json();
+    //       })
+    //       .then((data) => {
+    //         console.log("flightdetails", data);
+    //         setTrainData(data);
+    //       });
+    //   }, [source, dest]);
 
 
   return (
@@ -84,19 +79,19 @@ useEffect(()=>{
       <div>
         <Tabs.Group aria-label="Tabs with icons" style="underline">
           <Tabs.Item active={true} title="Transit" icon={LocationCityIcon}>
-            <RoutePaths s={source} d={dest}/>
+            {/* <RoutePaths s={source} d={dest}/> */}
           </Tabs.Item>
 
           <Tabs.Item title="Hotels" icon={HotelIcon}>
-            <Stay destination={dest}/>
+            {/* <Stay destination={dest}/> */}
           </Tabs.Item>
 
           <Tabs.Item title="Trains" icon={TrainIcon}>
-            {trainData && <Travel arr={trainData}/>}
+            {/* {trainData && <Travel arr={trainData}/>} */}
           </Tabs.Item>
 
           <Tabs.Item title="Map & Direction" icon={MapIcon}>
-            {sourcePoint && destinationPoint && <Map srclat={sourcePoint[0]} srclon={sourcePoint[1]} destlat={destinationPoint[0]} destlon={destinationPoint[1]}/>}
+            {/* {sourcePoint && destinationPoint && <Map srclat={sourcePoint[0]} srclon={sourcePoint[1]} destlat={destinationPoint[0]} destlon={destinationPoint[1]}/>} */}
           </Tabs.Item>
 
           <Tabs.Item title="Weather" icon={CloudIcon}>

@@ -30,7 +30,7 @@ const Weather = (props) =>  {
     };
     getWeatherDetails(nameOfCity);
   return (<>
-    {Object.keys(data).length > 0 ?
+    {Object.keys(data).length ?
     <div>
         <div className="shadow-lg shadow-gray-400 rounded- weatherResultBox">
            <img className="weatherIcon" src={logo} alt="weatherlogo"/>

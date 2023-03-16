@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import timg from '../assets/train.png'
-
+// import {}
 const TrainCard = (props) => {
+
   return (
     <div className="my-auto mx-auto">
         <Link

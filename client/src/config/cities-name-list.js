@@ -65,6 +65,7 @@ const cities = [
   "Baleshwar Town",
   "Ballari",
   "Balurghat",
+  "Bangalore",
   "Bankura",
   "Bapatla",
   "Baramula",

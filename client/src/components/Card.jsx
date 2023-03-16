@@ -7,12 +7,12 @@ const Card = (props) => {
       <div className="max-w-sm w-full h-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
           <img
-            className="rounded-t-lg max-w-sm w-full h-2/3"
+            className="rounded-t-lg max-w-sm w-full h-[60%]"
             src={props.image}
             alt=""
           />
         </a>
-        <div className="p-3">
+        <div className="p-3 h-[40%]">
           <div className="pl-4 pr-4 flex justify-between items-center">
             <a href="#">
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">

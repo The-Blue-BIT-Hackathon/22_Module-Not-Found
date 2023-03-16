@@ -3,16 +3,12 @@ import React from "react";
 const Navbar = () => {
   return (
     <>
-      <nav className="p-4 border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+      <nav className="px-4 py-8 border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
         <div className="container flex flex-wrap items-center justify-between mx-auto">
           <a href="#" className="flex items-center">
-            <img
-              src="https://flowbite.com/docs/images/logo.svg"
-              className="h-6 mr-3 sm:h-10"
-              alt="Flowbite Logo"
-            />
+            
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-              Flowbite
+              Travel Companion
             </span>
           </a>
           <button

@@ -7,8 +7,12 @@ const helmet = require('helmet')
 const morgan = require('morgan')
 const bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken')
+
+
 const app = express()
 const { cities } = require('./config/cities-name-list')
+const {airports_data}=require('./config/airports')
+const Station_codes=require('./config/Railway Stations.json')
 app.use(bodyParser.urlencoded({ extended: true }));
 require('dotenv').config()
 const authRoute=require('./routes/auth')
@@ -49,11 +53,11 @@ app.get('/getNearbyAccesories/:cityName',async(req,res)=>{
     // ✅ call response.json() here
     const result = await response.json();
       const arr={};
-      console.log(result.resourceSets[0].resources[0].categoryTypeResults.length);
+      // console.log(result.resourceSets[0].resources[0].categoryTypeResults.length);
       for(var i=0;i<result.resourceSets[0].resources[0].categoryTypeResults.length;i++)
       {
         const category=result.resourceSets[0].resources[0].categoryTypeResults[i].categoryTypeName;
-        console.log("Category: ",category)
+        // console.log("Category: ",category)
         if(category=='See Do')
         result.resourceSets[0].resources[0].categoryTypeResults[i].categoryTypeName='SeeDo'
         // console.log(result.resourceSets[0].resources[0].categoryTypeResults[i].entities);
@@ -87,6 +91,47 @@ app.get('/getNearbyAccesories/:cityName',async(req,res)=>{
   }
 })
 
+function get_station_codes(cityName)
+{
+  console.log(cityName)
+  for (const v of Station_codes.data)
+  {
+    if(v.name.includes(cityName))
+    {
+      return v.code;
+    }
+
+  }
+  return false;
+  
+}
+app.get('/getTrainSchedules/:srcCity/:destCity',async(req,res)=>{
+
+
+  src_code=get_station_codes(req.params.srcCity.toUpperCase());
+  dest_code=get_station_codes(req.params.destCity.toUpperCase());
+
+  // console.log('get Src and destination city: ',src_code,dest_code)
+
+  const options = {
+    method: 'GET',
+    url: 'https://irctc1.p.rapidapi.com/api/v2/trainBetweenStations',
+    params: {fromStationCode: src_code, toStationCode: dest_code},
+    headers: {
+      'X-RapidAPI-Key': '4a6d3ede98mshe92ec2c19da2da7p138868jsna5091e38344a',
+      'X-RapidAPI-Host': 'irctc1.p.rapidapi.com'
+    }
+  };
+  
+  axios.request(options).then(function (response) {
+    console.log(response.data);
+    res.status(200).json(response.data);
+  }).catch(function (error) {
+    console.error(error);
+    res.status(404).json(error);
+  });
+  // res.status(200).json({src_code:src_code,dest_code:dest_code});
+})
 app.get('/getNearbyHotels/:cityname',async(req,res)=>{
   try {
     // console.log(url)
@@ -264,7 +309,74 @@ app.get('/getcities/:city/:dest_city', (req, res) => {
   }
 })
 
+function get_airport_data(cityName)
+{
+  // console.log('showing airport data: ',airports_data)
+  for(const v of airports_data)
+  {
+    if(v.city.toUpperCase()==cityName.toUpperCase())
+    {
+      return v;
+    }
+  }
+  return null;
+}
 
+app.get('/getFlights/:src_city/:dest_city/:date',async(req,res)=>{
+
+
+  const srcCityData=get_airport_data(req.params.src_city);
+  const destCityData=get_airport_data(req.params.dest_city);
+    if(srcCityData==null||destCityData==null||srcCityData==undefined||destCityData==undefined)
+    {
+      if(srcCityData==null||srcCityData==undefined)
+      {
+        res.status(404).json({msg:'AIRPORT NOT AVAILABLE AT SOURCE LOCATION'});
+
+      }
+      else if(destCityData==null||destCityData==undefined)
+      {
+        res.status(404).json({msg:'AIRPORT NOT AVAILABLE AT DESTINATION LOCATION'});
+      }
+    }
+    
+else
+{
+const options = {
+  method: 'GET',
+  url: 'https://flight-info-api.p.rapidapi.com/schedules',
+  params: {version: 'v1', DepartureDate: req.params.date, DepartureAirport: srcCityData.code, ArrivalAirport: destCityData.code},
+  headers: {
+    'X-RapidAPI-Key': '4a6d3ede98mshe92ec2c19da2da7p138868jsna5091e38344a',
+    'X-RapidAPI-Host': 'flight-info-api.p.rapidapi.com'
+  }
+};
+
+axios.request(options).then(function (response) {
+	// console.log(response.data);
+  const req_data=[];
+
+    for(const v of response.data.data)
+    {
+      const arr={};
+      arr['arr_carrier']=v.carrierCode.icao;
+      arr['arr_apcode']=v.arrival.airport.iata;
+      arr['arr_date']=v.arrival.date;
+      arr['arr_time']=v.arrival.passengerLocalTime;
+      arr['dep_apcode']=v.arrival.airport.iata;
+      arr['dep_date']=v.arrival.date;
+      arr['dep_time']=v.departure.passengerLocalTime;
+      arr['int_stops']=v.segmentInfo.intermediateAirports.iata;
+      req_data.push(arr);
+
+    }
+  res.status(200).json(req_data);
+}).catch(function (error) {
+	console.error(error);
+  res.status(500).json(error);
+});
+}
+})
 
 
 app.listen(5000, () => {

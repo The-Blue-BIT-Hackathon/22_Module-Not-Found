@@ -1,0 +1,1093 @@
+{
+    "data": [
+        {
+            "carrierCode": {
+                "iata": "6E",
+                "icao": "IGO"
+            },
+            "serviceSuffix": "",
+            "flightNumber": 361,
+            "sequenceNumber": 1,
+            "flightType": "Scheduled",
+            "departure": {
+                "airport": {
+                    "iata": "PNQ"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "00:45"
+            },
+            "arrival": {
+                "airport": {
+                    "iata": "BLR"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "02:20"
+            },
+            "aircraftType": {
+                "iata": "320"
+            },
+            "serviceTypeCode": {
+                "iata": "J"
+            },
+            "segmentInfo": {
+                "numberOfStops": 0,
+                "intermediateAirports": {
+                    "iata": []
+                }
+            },
+            "oagFingerprint": "ecdff0013d80cb43a729020525b215277dd9282103448a55dfbd65b8aa9fecb5",
+            "codeshare": {
+                "jointOperationAirlineDesignators": [],
+                "comments010": [
+                    {
+                        "code": "QF",
+                        "serviceNumber": "5138",
+                        "suffix": ""
+                    }
+                ]
+            }
+        },
+        {
+            "carrierCode": {
+                "iata": "QF",
+                "icao": "QFA"
+            },
+            "serviceSuffix": "",
+            "flightNumber": 5138,
+            "sequenceNumber": 1,
+            "flightType": "Scheduled",
+            "departure": {
+                "airport": {
+                    "iata": "PNQ"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "00:45"
+            },
+            "arrival": {
+                "airport": {
+                    "iata": "BLR"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "02:20"
+            },
+            "aircraftType": {
+                "iata": "320"
+            },
+            "serviceTypeCode": {
+                "iata": "J"
+            },
+            "segmentInfo": {
+                "numberOfStops": 0,
+                "intermediateAirports": {
+                    "iata": []
+                }
+            },
+            "oagFingerprint": "e32d366a0ea4c9a2a396f7f79e0f673c2fdbdc77742528693a001c7590036ca7",
+            "codeshare": {
+                "operatingAirlineDisclosure": {
+                    "code": "6E",
+                    "name": "",
+                    "number": "2"
+                },
+                "aircraftOwner": {
+                    "code": "6E",
+                    "name": ""
+                },
+                "jointOperationAirlineDesignators": [],
+                "comments010": [],
+                "comment050": {
+                    "code": "6E",
+                    "serviceNumber": "361",
+                    "suffix": ""
+                }
+            }
+        },
+        {
+            "carrierCode": {
+                "iata": "QF",
+                "icao": "QFA"
+            },
+            "serviceSuffix": "",
+            "flightNumber": 8342,
+            "sequenceNumber": 1,
+            "flightType": "Scheduled",
+            "departure": {
+                "airport": {
+                    "iata": "PNQ"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "02:45"
+            },
+            "arrival": {
+                "airport": {
+                    "iata": "BLR"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "04:15"
+            },
+            "aircraftType": {
+                "iata": "320"
+            },
+            "serviceTypeCode": {
+                "iata": "J"
+            },
+            "segmentInfo": {
+                "numberOfStops": 0,
+                "intermediateAirports": {
+                    "iata": []
+                }
+            },
+            "oagFingerprint": "ebf99ad9a5b4eb83b8e99a467497ed8045c3b74ce70dec56b1af1d67037f7048",
+            "codeshare": {
+                "operatingAirlineDisclosure": {
+                    "code": "6E",
+                    "name": "",
+                    "number": "2"
+                },
+                "aircraftOwner": {
+                    "code": "6E",
+                    "name": ""
+                },
+                "jointOperationAirlineDesignators": [],
+                "comments010": [],
+                "comment050": {
+                    "code": "6E",
+                    "serviceNumber": "6564",
+                    "suffix": ""
+                }
+            }
+        },
+        {
+            "carrierCode": {
+                "iata": "6E",
+                "icao": "IGO"
+            },
+            "serviceSuffix": "",
+            "flightNumber": 6564,
+            "sequenceNumber": 1,
+            "flightType": "Scheduled",
+            "departure": {
+                "airport": {
+                    "iata": "PNQ"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "02:45"
+            },
+            "arrival": {
+                "airport": {
+                    "iata": "BLR"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "04:15"
+            },
+            "aircraftType": {
+                "iata": "320"
+            },
+            "serviceTypeCode": {
+                "iata": "J"
+            },
+            "segmentInfo": {
+                "numberOfStops": 0,
+                "intermediateAirports": {
+                    "iata": []
+                }
+            },
+            "oagFingerprint": "e4fe9bf5b89a55562c08802525c2b216572c4952e2fe94deaabaa6de35f6c24d",
+            "codeshare": {
+                "jointOperationAirlineDesignators": [],
+                "comments010": [
+                    {
+                        "code": "QF",
+                        "serviceNumber": "8342",
+                        "suffix": ""
+                    }
+                ]
+            }
+        },
+        {
+            "carrierCode": {
+                "iata": "QF",
+                "icao": "QFA"
+            },
+            "serviceSuffix": "",
+            "flightNumber": 5140,
+            "sequenceNumber": 1,
+            "flightType": "Scheduled",
+            "departure": {
+                "airport": {
+                    "iata": "PNQ"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "04:50"
+            },
+            "arrival": {
+                "airport": {
+                    "iata": "BLR"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "06:20"
+            },
+            "aircraftType": {
+                "iata": "321"
+            },
+            "serviceTypeCode": {
+                "iata": "J"
+            },
+            "segmentInfo": {
+                "numberOfStops": 0,
+                "intermediateAirports": {
+                    "iata": []
+                }
+            },
+            "oagFingerprint": "2f77c6254b8dd975b991e10ae5e078f32c7bca18fedd97c3f5a1083a36405e0f",
+            "codeshare": {
+                "operatingAirlineDisclosure": {
+                    "code": "6E",
+                    "name": "",
+                    "number": "2"
+                },
+                "aircraftOwner": {
+                    "code": "6E",
+                    "name": ""
+                },
+                "jointOperationAirlineDesignators": [],
+                "comments010": [],
+                "comment050": {
+                    "code": "6E",
+                    "serviceNumber": "6877",
+                    "suffix": ""
+                }
+            }
+        },
+        {
+            "carrierCode": {
+                "iata": "6E",
+                "icao": "IGO"
+            },
+            "serviceSuffix": "",
+            "flightNumber": 6877,
+            "sequenceNumber": 1,
+            "flightType": "Scheduled",
+            "departure": {
+                "airport": {
+                    "iata": "PNQ"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "04:50"
+            },
+            "arrival": {
+                "airport": {
+                    "iata": "BLR"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "06:20"
+            },
+            "aircraftType": {
+                "iata": "321"
+            },
+            "serviceTypeCode": {
+                "iata": "J"
+            },
+            "segmentInfo": {
+                "numberOfStops": 0,
+                "intermediateAirports": {
+                    "iata": []
+                }
+            },
+            "oagFingerprint": "29b07ee0817c527d8a0eeb27a88771c769ffd60f3b42e95db98880e3b0aa4fb6",
+            "codeshare": {
+                "jointOperationAirlineDesignators": [],
+                "comments010": [
+                    {
+                        "code": "QF",
+                        "serviceNumber": "5140",
+                        "suffix": ""
+                    }
+                ]
+            }
+        },
+        {
+            "carrierCode": {
+                "iata": "I5",
+                "icao": "IAD"
+            },
+            "serviceSuffix": "",
+            "flightNumber": 611,
+            "sequenceNumber": 1,
+            "flightType": "Scheduled",
+            "departure": {
+                "airport": {
+                    "iata": "PNQ"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "05:35"
+            },
+            "arrival": {
+                "airport": {
+                    "iata": "BLR"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "06:55"
+            },
+            "aircraftType": {
+                "iata": "320"
+            },
+            "serviceTypeCode": {
+                "iata": "J"
+            },
+            "segmentInfo": {
+                "numberOfStops": 0,
+                "intermediateAirports": {
+                    "iata": []
+                }
+            },
+            "oagFingerprint": "be45e68a9e2b086278cc3deda15740afaeb49704b9af6359464c33cb5cfc2c17",
+            "codeshare": {
+                "jointOperationAirlineDesignators": [],
+                "comments010": []
+            }
+        },
+        {
+            "carrierCode": {
+                "iata": "QF",
+                "icao": "QFA"
+            },
+            "serviceSuffix": "",
+            "flightNumber": 5142,
+            "sequenceNumber": 1,
+            "flightType": "Scheduled",
+            "departure": {
+                "airport": {
+                    "iata": "PNQ"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "07:20"
+            },
+            "arrival": {
+                "airport": {
+                    "iata": "BLR"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "09:00"
+            },
+            "aircraftType": {
+                "iata": "320"
+            },
+            "serviceTypeCode": {
+                "iata": "J"
+            },
+            "segmentInfo": {
+                "numberOfStops": 0,
+                "intermediateAirports": {
+                    "iata": []
+                }
+            },
+            "oagFingerprint": "d95a30ce6f18211537303e83c740b45efd725f3cb45b58f708387edd96684c4c",
+            "codeshare": {
+                "operatingAirlineDisclosure": {
+                    "code": "6E",
+                    "name": "",
+                    "number": "2"
+                },
+                "aircraftOwner": {
+                    "code": "6E",
+                    "name": ""
+                },
+                "jointOperationAirlineDesignators": [],
+                "comments010": [],
+                "comment050": {
+                    "code": "6E",
+                    "serviceNumber": "391",
+                    "suffix": ""
+                }
+            }
+        },
+        {
+            "carrierCode": {
+                "iata": "6E",
+                "icao": "IGO"
+            },
+            "serviceSuffix": "",
+            "flightNumber": 391,
+            "sequenceNumber": 1,
+            "flightType": "Scheduled",
+            "departure": {
+                "airport": {
+                    "iata": "PNQ"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "07:20"
+            },
+            "arrival": {
+                "airport": {
+                    "iata": "BLR"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "09:00"
+            },
+            "aircraftType": {
+                "iata": "320"
+            },
+            "serviceTypeCode": {
+                "iata": "J"
+            },
+            "segmentInfo": {
+                "numberOfStops": 0,
+                "intermediateAirports": {
+                    "iata": []
+                }
+            },
+            "oagFingerprint": "534c88360386bd6c619cd39022bc1997ec040245ac4b13e9618fe3a38ab9425c",
+            "codeshare": {
+                "jointOperationAirlineDesignators": [],
+                "comments010": [
+                    {
+                        "code": "QF",
+                        "serviceNumber": "5142",
+                        "suffix": ""
+                    }
+                ]
+            }
+        },
+        {
+            "carrierCode": {
+                "iata": "QP",
+                "icao": "AKJ"
+            },
+            "serviceSuffix": "",
+            "flightNumber": 1312,
+            "sequenceNumber": 1,
+            "flightType": "Scheduled",
+            "departure": {
+                "airport": {
+                    "iata": "PNQ"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "07:50"
+            },
+            "arrival": {
+                "airport": {
+                    "iata": "BLR"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "09:30"
+            },
+            "aircraftType": {
+                "iata": "7M8"
+            },
+            "serviceTypeCode": {
+                "iata": "J"
+            },
+            "segmentInfo": {
+                "numberOfStops": 0,
+                "intermediateAirports": {
+                    "iata": []
+                }
+            },
+            "oagFingerprint": "03396f7b79e8626f1900de4a350840dc8366b63776c0d8fd166455bb81e3b512",
+            "codeshare": {
+                "jointOperationAirlineDesignators": [],
+                "comments010": []
+            }
+        },
+        {
+            "carrierCode": {
+                "iata": "UK"
+            },
+            "serviceSuffix": "",
+            "flightNumber": 552,
+            "sequenceNumber": 1,
+            "flightType": "Scheduled",
+            "departure": {
+                "airport": {
+                    "iata": "PNQ"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "08:35"
+            },
+            "arrival": {
+                "airport": {
+                    "iata": "BLR"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "10:05"
+            },
+            "aircraftType": {
+                "iata": "320"
+            },
+            "serviceTypeCode": {
+                "iata": "J"
+            },
+            "segmentInfo": {
+                "numberOfStops": 0,
+                "intermediateAirports": {
+                    "iata": []
+                }
+            },
+            "oagFingerprint": "043683e3d3c2ffbb5e749eb00f64099f6ed59bd8b58151cad402536d0fa050a6",
+            "codeshare": {
+                "jointOperationAirlineDesignators": [],
+                "comments010": []
+            }
+        },
+        {
+            "carrierCode": {
+                "iata": "QP",
+                "icao": "AKJ"
+            },
+            "serviceSuffix": "",
+            "flightNumber": 1365,
+            "sequenceNumber": 1,
+            "flightType": "Scheduled",
+            "departure": {
+                "airport": {
+                    "iata": "PNQ"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "17:30"
+            },
+            "arrival": {
+                "airport": {
+                    "iata": "BLR"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "19:05"
+            },
+            "aircraftType": {
+                "iata": "7M8"
+            },
+            "serviceTypeCode": {
+                "iata": "J"
+            },
+            "segmentInfo": {
+                "numberOfStops": 0,
+                "intermediateAirports": {
+                    "iata": []
+                }
+            },
+            "oagFingerprint": "8df305396a29c6f54012206f047ff957c87f7751f05ee4caa5db0a71589391d4",
+            "codeshare": {
+                "jointOperationAirlineDesignators": [],
+                "comments010": []
+            }
+        },
+        {
+            "carrierCode": {
+                "iata": "G8",
+                "icao": "GOW"
+            },
+            "serviceSuffix": "",
+            "flightNumber": 242,
+            "sequenceNumber": 1,
+            "flightType": "Scheduled",
+            "departure": {
+                "airport": {
+                    "iata": "PNQ"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "18:25"
+            },
+            "arrival": {
+                "airport": {
+                    "iata": "BLR"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "19:50"
+            },
+            "aircraftType": {
+                "iata": "32A"
+            },
+            "serviceTypeCode": {
+                "iata": "J"
+            },
+            "segmentInfo": {
+                "numberOfStops": 0,
+                "intermediateAirports": {
+                    "iata": []
+                }
+            },
+            "oagFingerprint": "c8c430ed0ebfdfc7c2e2ac874d0f4449bdafb4d6505b5be5d01ade3bedd63b1e",
+            "codeshare": {
+                "jointOperationAirlineDesignators": [],
+                "comments010": []
+            }
+        },
+        {
+            "carrierCode": {
+                "iata": "W2",
+                "icao": "FXT"
+            },
+            "serviceSuffix": "",
+            "flightNumber": 8969,
+            "sequenceNumber": 1,
+            "flightType": "Scheduled",
+            "departure": {
+                "airport": {
+                    "iata": "PNQ"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "18:25"
+            },
+            "arrival": {
+                "airport": {
+                    "iata": "BLR"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "19:50"
+            },
+            "aircraftType": {
+                "iata": "32A"
+            },
+            "serviceTypeCode": {
+                "iata": "J"
+            },
+            "segmentInfo": {
+                "numberOfStops": 0,
+                "intermediateAirports": {
+                    "iata": []
+                }
+            },
+            "oagFingerprint": "411cd7dbba397166a695ac6b9d278e86c5e7c7cd5c2629ed4b6e39082222b2c1",
+            "codeshare": {
+                "operatingAirlineDisclosure": {
+                    "code": "G8",
+                    "name": "",
+                    "number": "2"
+                },
+                "aircraftOwner": {
+                    "code": "G8",
+                    "name": ""
+                },
+                "jointOperationAirlineDesignators": [],
+                "comments010": [],
+                "comment050": {
+                    "code": "G8",
+                    "serviceNumber": "242",
+                    "suffix": ""
+                }
+            }
+        },
+        {
+            "carrierCode": {
+                "iata": "QF",
+                "icao": "QFA"
+            },
+            "serviceSuffix": "",
+            "flightNumber": 8340,
+            "sequenceNumber": 1,
+            "flightType": "Scheduled",
+            "departure": {
+                "airport": {
+                    "iata": "PNQ"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "19:20"
+            },
+            "arrival": {
+                "airport": {
+                    "iata": "BLR"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "20:50"
+            },
+            "aircraftType": {
+                "iata": "320"
+            },
+            "serviceTypeCode": {
+                "iata": "J"
+            },
+            "segmentInfo": {
+                "numberOfStops": 0,
+                "intermediateAirports": {
+                    "iata": []
+                }
+            },
+            "oagFingerprint": "09b70b990b606c31521b26c43c5861430f8a217a58f56c24f2f4850a03cc86b4",
+            "codeshare": {
+                "operatingAirlineDisclosure": {
+                    "code": "6E",
+                    "name": "",
+                    "number": "2"
+                },
+                "aircraftOwner": {
+                    "code": "6E",
+                    "name": ""
+                },
+                "jointOperationAirlineDesignators": [],
+                "comments010": [],
+                "comment050": {
+                    "code": "6E",
+                    "serviceNumber": "6055",
+                    "suffix": ""
+                }
+            }
+        },
+        {
+            "carrierCode": {
+                "iata": "6E",
+                "icao": "IGO"
+            },
+            "serviceSuffix": "",
+            "flightNumber": 6055,
+            "sequenceNumber": 1,
+            "flightType": "Scheduled",
+            "departure": {
+                "airport": {
+                    "iata": "PNQ"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "19:20"
+            },
+            "arrival": {
+                "airport": {
+                    "iata": "BLR"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "20:50"
+            },
+            "aircraftType": {
+                "iata": "320"
+            },
+            "serviceTypeCode": {
+                "iata": "J"
+            },
+            "segmentInfo": {
+                "numberOfStops": 0,
+                "intermediateAirports": {
+                    "iata": []
+                }
+            },
+            "oagFingerprint": "3869b954dad19e86603ad4bcab14ec9d8e45103f17405a2c5da2f602d66d10b7",
+            "codeshare": {
+                "jointOperationAirlineDesignators": [],
+                "comments010": [
+                    {
+                        "code": "QF",
+                        "serviceNumber": "8340",
+                        "suffix": ""
+                    }
+                ]
+            }
+        },
+        {
+            "carrierCode": {
+                "iata": "I5",
+                "icao": "IAD"
+            },
+            "serviceSuffix": "",
+            "flightNumber": 1427,
+            "sequenceNumber": 2,
+            "flightType": "Scheduled",
+            "departure": {
+                "airport": {
+                    "iata": "PNQ"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "19:25"
+            },
+            "arrival": {
+                "airport": {
+                    "iata": "BLR"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "20:45"
+            },
+            "aircraftType": {
+                "iata": "320"
+            },
+            "serviceTypeCode": {
+                "iata": "J"
+            },
+            "segmentInfo": {
+                "numberOfStops": 0,
+                "intermediateAirports": {
+                    "iata": []
+                }
+            },
+            "oagFingerprint": "6b0696e72e223daebb7c6303284531e2a3179a9cdb9049f79d8b6f3d76f59048",
+            "codeshare": {
+                "jointOperationAirlineDesignators": [],
+                "comments010": []
+            }
+        },
+        {
+            "carrierCode": {
+                "iata": "6E",
+                "icao": "IGO"
+            },
+            "serviceSuffix": "",
+            "flightNumber": 831,
+            "sequenceNumber": 1,
+            "flightType": "Scheduled",
+            "departure": {
+                "airport": {
+                    "iata": "PNQ"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "22:40"
+            },
+            "arrival": {
+                "airport": {
+                    "iata": "BLR"
+                },
+                "terminal": "",
+                "date": "2023-03-19",
+                "passengerLocalTime": "00:10"
+            },
+            "aircraftType": {
+                "iata": "321"
+            },
+            "serviceTypeCode": {
+                "iata": "J"
+            },
+            "segmentInfo": {
+                "numberOfStops": 0,
+                "intermediateAirports": {
+                    "iata": []
+                }
+            },
+            "oagFingerprint": "c475125e40c583a58cedbdcdb7fe99bb0f536d1b0bb1ec58bcbf28b19da6d428",
+            "codeshare": {
+                "jointOperationAirlineDesignators": [],
+                "comments010": [
+                    {
+                        "code": "AF",
+                        "serviceNumber": "3344",
+                        "suffix": ""
+                    }
+                ]
+            }
+        },
+        {
+            "carrierCode": {
+                "iata": "AF",
+                "icao": "AFR"
+            },
+            "serviceSuffix": "",
+            "flightNumber": 3344,
+            "sequenceNumber": 1,
+            "flightType": "Scheduled",
+            "departure": {
+                "airport": {
+                    "iata": "PNQ"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "22:40"
+            },
+            "arrival": {
+                "airport": {
+                    "iata": "BLR"
+                },
+                "terminal": "",
+                "date": "2023-03-19",
+                "passengerLocalTime": "00:10"
+            },
+            "aircraftType": {
+                "iata": "321"
+            },
+            "serviceTypeCode": {
+                "iata": "J"
+            },
+            "segmentInfo": {
+                "numberOfStops": 0,
+                "intermediateAirports": {
+                    "iata": []
+                }
+            },
+            "oagFingerprint": "ca865e225744bcf9130ff30357f9c364bb4f89e58b3ffdadf40f92cf6ce7171f",
+            "codeshare": {
+                "operatingAirlineDisclosure": {
+                    "code": "6E",
+                    "name": "",
+                    "number": "2"
+                },
+                "aircraftOwner": {
+                    "code": "6E",
+                    "name": ""
+                },
+                "cockpitCrewEmployer": {
+                    "code": "6E",
+                    "name": "",
+                    "number": "4"
+                },
+                "jointOperationAirlineDesignators": [],
+                "comments010": [],
+                "comment050": {
+                    "code": "6E",
+                    "serviceNumber": "831",
+                    "suffix": ""
+                }
+            }
+        },
+        {
+            "carrierCode": {
+                "iata": "UK"
+            },
+            "serviceSuffix": "",
+            "flightNumber": 554,
+            "sequenceNumber": 1,
+            "flightType": "Scheduled",
+            "departure": {
+                "airport": {
+                    "iata": "PNQ"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "23:05"
+            },
+            "arrival": {
+                "airport": {
+                    "iata": "BLR"
+                },
+                "terminal": "",
+                "date": "2023-03-19",
+                "passengerLocalTime": "00:50"
+            },
+            "aircraftType": {
+                "iata": "320"
+            },
+            "serviceTypeCode": {
+                "iata": "J"
+            },
+            "segmentInfo": {
+                "numberOfStops": 0,
+                "intermediateAirports": {
+                    "iata": []
+                }
+            },
+            "oagFingerprint": "1150c3677ba36e79a91e4c74958c81925c9e68a235f4c66d7611c8031ac2f507",
+            "codeshare": {
+                "jointOperationAirlineDesignators": [],
+                "comments010": []
+            }
+        },
+        {
+            "carrierCode": {
+                "iata": "I5",
+                "icao": "IAD"
+            },
+            "serviceSuffix": "",
+            "flightNumber": 975,
+            "sequenceNumber": 1,
+            "flightType": "Scheduled",
+            "departure": {
+                "airport": {
+                    "iata": "PNQ"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "23:10"
+            },
+            "arrival": {
+                "airport": {
+                    "iata": "BLR"
+                },
+                "terminal": "",
+                "date": "2023-03-19",
+                "passengerLocalTime": "00:40"
+            },
+            "aircraftType": {
+                "iata": "320"
+            },
+            "serviceTypeCode": {
+                "iata": "J"
+            },
+            "segmentInfo": {
+                "numberOfStops": 0,
+                "intermediateAirports": {
+                    "iata": []
+                }
+            },
+            "oagFingerprint": "afe5ee1a957e231e9db0f968279473ac0cae168d8c7e60194b778194e5fc7905",
+            "codeshare": {
+                "jointOperationAirlineDesignators": [],
+                "comments010": []
+            }
+        },
+        {
+            "carrierCode": {
+                "iata": "QP",
+                "icao": "AKJ"
+            },
+            "serviceSuffix": "",
+            "flightNumber": 1318,
+            "sequenceNumber": 1,
+            "flightType": "Scheduled",
+            "departure": {
+                "airport": {
+                    "iata": "PNQ"
+                },
+                "terminal": "",
+                "date": "2023-03-18",
+                "passengerLocalTime": "23:40"
+            },
+            "arrival": {
+                "airport": {
+                    "iata": "BLR"
+                },
+                "terminal": "",
+                "date": "2023-03-19",
+                "passengerLocalTime": "01:10"
+            },
+            "aircraftType": {
+                "iata": "7M8"
+            },
+            "serviceTypeCode": {
+                "iata": "J"
+            },
+            "segmentInfo": {
+                "numberOfStops": 0,
+                "intermediateAirports": {
+                    "iata": []
+                }
+            },
+            "oagFingerprint": "872ba29e57554d24013b756d264dbe365da46cbf360aae19f15d70b725d40a06",
+            "codeshare": {
+                "jointOperationAirlineDesignators": [],
+                "comments010": []
+            }
+        }
+    ],
+    "paging": {
+        "limit": 100,
+        "totalCount": 22,
+        "totalPages": 1,
+        "next": ""
+    }
+}

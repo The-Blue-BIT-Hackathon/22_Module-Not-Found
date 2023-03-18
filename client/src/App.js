@@ -19,6 +19,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import SomethingWentWrong from "./components/SomethingWentWrong";
 import SearchResult from "./components/SearchResult";
+import ReviewPage from "./pages/ReviewPage";
+import GiveFeedBackPage from "./components/GiveFeedBackPage";
 
 // export const router = createBrowserRouter([
 //     {
@@ -73,6 +75,16 @@ export default function App() {
             <Route path="/error" element={<SomethingWentWrong />} />
             <Route path="/search" element={<SearchResult />} />
           </Route>
+
+
+          <Route path="/review" element={<ReviewPage/>}>
+            <Route index element={< GiveFeedBackPage/>} />
+          </Route>
+
+          <Route path="*" element={<PageNotFound/>}>
+          <Route index element={<PageNotFound/>}></Route>
+          </Route>
+          
 
         </Routes>
       </Router>

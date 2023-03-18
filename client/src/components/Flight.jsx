@@ -7,7 +7,7 @@ const Flight = (props) => {
   const [isImg, setIsImg] = useState(false);
   useEffect(() => {
     fetch(
-      `http://localhost:5000/error/getFlights/${props.src}/${props.dest}/${props.date}`
+      `http://localhost:5000/getFlights/${props.src}/${props.dest}/${props.date}`
     )
       .then((res) => {
         console.log("api called0");

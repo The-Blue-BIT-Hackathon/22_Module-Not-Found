@@ -428,6 +428,11 @@ app.get('/getDestinationCityData/:destCity',async(req,res)=>{
     res.status(404).json(error);
   });
 })
+app.get('/getreviews/:city',async(req,res)=>{
+  
+  const user=await destination.find({cityName:req.body.city});
+  res.status(200).json(user);
+})
 app.listen(5000, () => {
   console.log("App is listening at port 5000...");
 });

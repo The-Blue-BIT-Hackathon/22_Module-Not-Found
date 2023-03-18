@@ -69,10 +69,15 @@ console.log('location is : ',data.location)
       res.status(404).json(err);
     }
 })
+app.get('/getreviews/:city',async(req,res)=>{
+  
+  const user=await destination.find({cityName:req.body.Body.city});
+  res.status(200).json(user);
+})
 app.use('/travel/auth', authRoute);
 app.use('/feedback',feedbackRoute);
 
-app.get('/getNearbyAccesories/:cityName',async(req,res)=>{
+app.get('/getinfo/getNearbyAccesories/:cityName',async(req,res)=>{
   try {
     console.log(req.params.cityName)
     const url = `http://dev.virtualearth.net/REST/V1/Routes/LocalInsights?Waypoint=${req.params.cityName}&TravelMode=Driving&Optimize=time&MaxTime=60&TimeUnit=Minute&type=SeeDo,Shop&key=AlTC9he2DiTAaibqX9oBK9WwGxo10wPsfla-myVg5jEmYyE_gPO9_Goo_S1WEUYL`
@@ -139,34 +144,12 @@ function get_station_codes(cityName)
   return false;
   
 }
-app.get('/getTrainSchedules/:srcCity/:destCity',async(req,res)=>{
+// app.get('/getinfo/getTrainSchedules/:srcCity/:destCity',async(req,res)=>{
 
 
-  src_code=get_station_codes(req.params.srcCity.toUpperCase());
-  dest_code=get_station_codes(req.params.destCity.toUpperCase());
-
-  // console.log('get Src and destination city: ',src_code,dest_code)
-
-  const options = {
-    method: 'GET',
-    url: 'https://irctc1.p.rapidapi.com/api/v2/trainBetweenStations',
-    params: {fromStationCode: src_code, toStationCode: dest_code},
-    headers: {
-      'X-RapidAPI-Key': '4a6d3ede98mshe92ec2c19da2da7p138868jsna5091e38344a',
-      'X-RapidAPI-Host': 'irctc1.p.rapidapi.com'
-    }
-  };
-  
-  axios.request(options).then(function (response) {
-    console.log(response.data);
-    res.status(200).json(response.data);
-  }).catch(function (error) {
-    console.error(error);
-    res.status(404).json(error);
-  });
-  // res.status(200).json({src_code:src_code,dest_code:dest_code});
-})
-app.get('/getNearbyHotels/:cityname',async(req,res)=>{
+//   // res.status(200).json({src_code:src_code,dest_code:dest_code});
+// })
+app.get('getinfo/getNearbyHotels/:cityname',async(req,res)=>{
   try {
     // console.log(url)
     const url = `http://dev.virtualearth.net/REST/V1/Routes/LocalInsights?Waypoint=${req.params.cityname}&TravelMode=Driving&Optimize=time&MaxTime=60&TimeUnit=Minute&type=HotelsAndMotels&key=AlTC9he2DiTAaibqX9oBK9WwGxo10wPsfla-myVg5jEmYyE_gPO9_Goo_S1WEUYL`
@@ -221,7 +204,7 @@ app.get('/search/:cityname', async (req, res) => {
 })
 
 
-app.get('/getcities/:city/:dest_city', (req, res) => {
+app.get('getinfo/getcities/:city/:dest_city', (req, res) => {
   try {
 
     const getcity = ValidCity(req.params.city);
@@ -355,7 +338,7 @@ function get_airport_data(cityName)
   return null;
 }
 
-app.get('/getFlights/:src_city/:dest_city/:date',async(req,res)=>{
+app.get('getinfo/getFlights/:src_city/:dest_city/:date',async(req,res)=>{
 
 
   const srcCityData=get_airport_data(req.params.src_city);
@@ -414,7 +397,7 @@ axios.request(options).then(function (response) {
 
 
 
-app.get('/getDestinationCityData/:destCity',async(req,res)=>{
+app.get('getinfo/getDestinationCityData/:destCity',async(req,res)=>{
   
   // const url=`https://en.wikipedia.org/w//api.php?action=query&format=json&list=allimages&aifrom=${req.params.destCity}&ailimit=10`
   const url=`https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&piprop=original&titles=${req.params.destCity}`

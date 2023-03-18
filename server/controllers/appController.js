@@ -69,20 +69,33 @@ const register = async (req, res) => {
     console.log(err);
   }
 }
-// isLoggedIn()
-// {
-    
-//     try{
-      
-//         const ans=jwt.verify(req.cookies.jwtoken,process.env.SECRET_KEY);
-//         req.user=ans;
-//     }
-//     catch(err)
-//     {
-        
-//     }
-// }
+
+const trainSchedules=async(req,res)=>{
+  
+  src_code=get_station_codes(req.params.srcCity.toUpperCase());
+  dest_code=get_station_codes(req.params.destCity.toUpperCase());
+
+  // console.log('get Src and destination city: ',src_code,dest_code)
+
+  const options = {
+    method: 'GET',
+    url: 'https://irctc1.p.rapidapi.com/api/v2/trainBetweenStations',
+    params: {fromStationCode: src_code, toStationCode: dest_code},
+    headers: {
+      'X-RapidAPI-Key': '4a6d3ede98mshe92ec2c19da2da7p138868jsna5091e38344a',
+      'X-RapidAPI-Host': 'irctc1.p.rapidapi.com'
+    }
+  };
+  
+  axios.request(options).then(function (response) {
+    console.log(response.data);
+    res.status(200).json(response.data);
+  }).catch(function (error) {
+    console.error(error);
+    res.status(404).json(error);
+  });
+}
 
 
 
-module.exports={register,login}
+module.exports={register,login,trainSchedules}
